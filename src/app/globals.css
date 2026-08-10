@@ -35,7 +35,7 @@
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-bricolage), var(--font-inter), ui-sans-serif, sans-serif;
 
-  /* Radii — tightened for a calmer, less-rounded, more balanced feel */
+  /* Radii — tightened, balanced (approved level) */
   --radius-lg: 0.5rem;
   --radius-xl: 0.625rem;
   --radius-2xl: 0.875rem;
