@@ -63,7 +63,7 @@ export function AssistanceShowcase() {
 
 function ShowcasePanel() {
   return (
-    <div className="relative overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-brand to-brand-700 p-6 ring-1 ring-inset ring-white/10 md:p-12">
+    <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand to-brand-700 p-6 ring-1 ring-inset ring-white/10 md:p-12">
       {/* dot-grid texture */}
       <div
         aria-hidden

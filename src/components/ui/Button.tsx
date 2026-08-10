@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 type Variant = "primary" | "light" | "outline" | "dark" | "ghost";
 
 const base =
-  "group inline-flex items-center justify-center gap-2 rounded-full text-sm font-semibold " +
+  "group inline-flex items-center justify-center gap-2 rounded-xl text-sm font-semibold " +
   "whitespace-nowrap select-none transition-[background,box-shadow,color,border-color] duration-200 " +
   "focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand/25";
 

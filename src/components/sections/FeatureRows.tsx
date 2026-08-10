@@ -58,7 +58,7 @@ export function FeatureRows({ heading, rows }: FeatureRowsProps) {
                     tone={flip ? "soft" : "steel"}
                     zoom
                     rounded={false}
-                    className="aspect-[4/3] w-full rounded-[1.5rem]"
+                    className="aspect-[4/3] w-full rounded-2xl"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </Reveal>

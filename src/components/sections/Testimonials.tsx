@@ -29,7 +29,7 @@ export function Testimonials({ items }: { items: Testimonial[] }) {
             <Reveal
               key={t.name + i}
               delay={i * 0.08}
-              className="flex h-full flex-col rounded-[1.25rem] bg-white p-6 shadow-card ring-1 ring-ink/[0.04] transition-shadow duration-300 hover:shadow-soft"
+              className="flex h-full flex-col rounded-2xl bg-white p-6 shadow-card ring-1 ring-ink/[0.04] transition-shadow duration-300 hover:shadow-soft"
             >
               <Stars rating={t.rating} />
               <p className="mt-4 flex-1 text-[15px] leading-relaxed text-ink-soft">

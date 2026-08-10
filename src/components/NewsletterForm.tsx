@@ -29,11 +29,11 @@ export function NewsletterForm() {
         onChange={(e) => setEmail(e.target.value)}
         placeholder="O seu e-mail"
         aria-label="O seu e-mail"
-        className="h-11 min-w-0 flex-1 rounded-full border border-white/15 bg-white/5 px-4 text-sm text-white placeholder:text-white/40 focus:border-white/40 focus:outline-none focus:ring-4 focus:ring-white/10"
+        className="h-11 min-w-0 flex-1 rounded-lg border border-white/15 bg-white/5 px-4 text-sm text-white placeholder:text-white/40 focus:border-white/40 focus:outline-none focus:ring-4 focus:ring-white/10"
       />
       <button
         type="submit"
-        className="h-11 shrink-0 rounded-full border border-white/10 bg-white px-4 text-sm font-semibold text-ink shadow-[0_1px_2px_rgba(0,0,0,0.2)] transition-colors hover:bg-white/90"
+        className="h-11 shrink-0 rounded-lg border border-white/10 bg-white px-4 text-sm font-semibold text-ink shadow-[0_1px_2px_rgba(0,0,0,0.2)] transition-colors hover:bg-white/90"
       >
         Subscrever
       </button>
