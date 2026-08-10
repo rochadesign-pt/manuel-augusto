@@ -185,6 +185,27 @@
   .cursor-dot, .cursor-ring { display: none; }
 }
 
+/* Scroll-shrink hero (full-bleed image shrinks into a rounded card on scroll) */
+.shrink-hero {
+  position: relative;
+  height: 165vh;
+}
+.shrink-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+@media (prefers-reduced-motion: reduce), (hover: none), (pointer: coarse) {
+  .shrink-hero {
+    height: auto;
+  }
+  .shrink-sticky {
+    position: static;
+    height: 78vh;
+  }
+}
+
 /* Marquee */
 .marquee-track {
   animation: marquee 34s linear infinite;

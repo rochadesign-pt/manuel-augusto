@@ -12,9 +12,9 @@ export function CtaBanner({
   text = "Fale connosco, teremos todo o gosto em dar-lhe uma resposta rápida, com conhecimento e garantia.",
 }: CtaBannerProps) {
   return (
-    <section className="bg-navy pb-0 pt-20 md:pt-28">
+    <section className="relative z-10 bg-white pb-0 pt-20 md:pt-28">
       <div className="container-page">
-        <Reveal className="relative overflow-hidden rounded-4xl bg-brand">
+        <Reveal className="relative mb-[-3.5rem] overflow-hidden rounded-4xl bg-brand md:mb-[-5.5rem]">
           <div
             aria-hidden
             className="pointer-events-none absolute inset-0 opacity-[0.15]"

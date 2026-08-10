@@ -9,8 +9,8 @@ const YEAR = 2025;
 
 export function Footer({ settings }: { settings: SiteSettings }) {
   return (
-    <footer id="contacto" className="relative overflow-hidden bg-navy text-white/70">
-      <div className="container-page relative z-10 pt-16 md:pt-20">
+    <footer id="contacto" className="relative z-0 overflow-hidden bg-navy text-white/70">
+      <div className="container-page relative z-10 pt-28 md:pt-40">
         <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr_1fr_1.3fr]">
           <div className="max-w-xs">
             <Logo

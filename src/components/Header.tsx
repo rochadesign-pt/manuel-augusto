@@ -16,8 +16,9 @@ export function Header({ settings }: { settings: SiteSettings }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
-  // Only the homepage has a full-bleed dark hero to overlay.
-  const transparentCapable = pathname === "/";
+  // Pages whose top is a full-bleed dark hero the header can overlay.
+  const DARK_HERO = ["/", "/apoio-tecnico", "/eletrodomesticos", "/material-eletrico"];
+  const transparentCapable = DARK_HERO.includes(pathname);
   const solid = !transparentCapable || scrolled;
   const onDark = !solid;
 
