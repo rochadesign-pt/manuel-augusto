@@ -14,7 +14,7 @@ export function CtaBanner({
   return (
     <section className="relative z-10 bg-white pb-0 pt-20 md:pt-28">
       <div className="container-page">
-        <Reveal className="relative mb-[-5rem] overflow-hidden rounded-4xl bg-brand md:mb-[-9rem]">
+        <Reveal className="relative mb-[-6rem] overflow-hidden rounded-4xl bg-brand md:mb-[-10rem]">
           <div
             aria-hidden
             className="pointer-events-none absolute inset-0 opacity-[0.15]"
