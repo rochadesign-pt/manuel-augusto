@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 
 import "./globals.css";
-import { display, inter } from "./fonts";
+import { display, fraunces, inter, sora, spaceGrotesk } from "./fonts";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://manuelaugusto.pt"),
@@ -35,7 +35,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt" className={`${inter.variable} ${display.variable}`}>
+    <html
+      lang="pt"
+      className={`${inter.variable} ${display.variable} ${fraunces.variable} ${spaceGrotesk.variable} ${sora.variable}`}
+    >
       <body>{children}</body>
     </html>
   );

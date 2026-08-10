@@ -31,9 +31,9 @@
   /* Accent (warm, used sparingly for awwwards contrast) */
   --color-accent: #f2c14e;
 
-  /* Fonts */
+  /* Fonts — --font-display is swappable live via the type-tweaks panel */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-display), var(--font-inter), ui-sans-serif, sans-serif;
+  --font-display: var(--font-bricolage), var(--font-inter), ui-sans-serif, sans-serif;
 
   /* Radii */
   --radius-xl: 1rem;
@@ -78,7 +78,7 @@
 
   h1, h2, h3, h4 {
     font-family: var(--font-display);
-    letter-spacing: -0.025em;
+    letter-spacing: var(--display-tracking, -0.025em);
     line-height: 1.02;
     text-wrap: balance;
     font-weight: 600;
