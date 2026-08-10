@@ -187,8 +187,9 @@ function Field({
   textarea?: boolean;
 }) {
   const base =
-    "w-full rounded-xl border border-line bg-surface-soft px-4 py-3 text-sm text-ink " +
-    "placeholder:text-muted-2 transition-colors focus:border-brand focus:bg-white focus:outline-none";
+    "w-full rounded-xl border border-line-strong bg-white px-4 py-3 text-sm text-ink " +
+    "shadow-[0_1px_2px_rgba(13,24,38,0.05)] placeholder:text-muted-2 transition-[box-shadow,border-color] " +
+    "focus:border-brand focus:outline-none focus:ring-4 focus:ring-brand/15";
   return (
     <label className="block">
       <span className="mb-1.5 block text-xs font-medium text-ink-soft">

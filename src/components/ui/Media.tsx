@@ -79,28 +79,48 @@ export function Media({
         <div
           className="absolute inset-0"
           style={{
-            background: `linear-gradient(135deg, ${t.from}, ${t.to})`,
+            background: `linear-gradient(140deg, ${t.from}, ${t.to})`,
           }}
           role="img"
           aria-label={alt}
         >
+          {/* soft light */}
           <div
-            className="absolute inset-0 opacity-[0.12] mix-blend-overlay"
+            className="absolute inset-0 opacity-[0.10] mix-blend-overlay"
             style={{
               backgroundImage:
-                "radial-gradient(circle at 25% 20%, #fff 0, transparent 45%), radial-gradient(circle at 80% 75%, #fff 0, transparent 40%)",
+                "radial-gradient(circle at 22% 18%, #fff 0, transparent 45%), radial-gradient(circle at 82% 78%, #fff 0, transparent 42%)",
             }}
           />
-          <span
-            className="absolute inset-0 grid place-items-center font-display text-6xl font-bold tracking-tight md:text-7xl"
-            style={{ color: t.fg }}
-          >
-            {monogram}
-          </span>
-          {label && (
-            <span className="absolute inset-x-0 bottom-0 p-4 text-sm font-medium text-white/85">
-              {label}
-            </span>
+          {/* fine dot grid for texture */}
+          <div
+            className="absolute inset-0 opacity-[0.14]"
+            style={{
+              backgroundImage:
+                "radial-gradient(currentColor 1px, transparent 1px)",
+              backgroundSize: "20px 20px",
+              color: t.fg,
+            }}
+          />
+          {monogram ? (
+            <div className="absolute inset-0 grid place-items-center">
+              <div className="flex items-center gap-2 rounded-xl bg-white/10 px-2.5 py-2 ring-1 ring-white/20 backdrop-blur-[2px]">
+                <span className="grid size-6 place-items-center rounded-md bg-white/90 font-display text-[11px] font-bold text-ink">
+                  {monogram}
+                </span>
+                {label && (
+                  <span className="pr-1 text-[13px] font-medium text-white/80">
+                    {label}
+                  </span>
+                )}
+              </div>
+            </div>
+          ) : (
+            label && (
+              <span className="absolute inset-x-0 bottom-0 p-4 text-sm font-medium text-white/85">
+                {label}
+              </span>
+            )
           )}
         </div>
       )}

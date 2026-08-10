@@ -11,18 +11,31 @@ type Variant = "primary" | "light" | "outline" | "dark" | "ghost";
 
 const base =
   "group inline-flex items-center justify-center gap-2 rounded-full text-sm font-semibold " +
-  "transition-colors duration-200 whitespace-nowrap select-none";
+  "whitespace-nowrap select-none transition-[background,box-shadow,color,border-color] duration-200 " +
+  "focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand/25";
 
 const sizes = {
   md: "h-11 px-5",
   lg: "h-12 px-6",
 } as const;
 
+// Untitled UI–style depth: 1px border, a faint top sheen, and a layered
+// shadow so buttons read as raised rather than flat.
 const variants: Record<Variant, string> = {
-  primary: "bg-brand text-white hover:bg-brand-600",
-  light: "bg-white text-ink hover:bg-surface-muted",
-  outline: "border border-line-strong text-ink hover:bg-surface-muted",
-  dark: "bg-ink text-white hover:bg-ink-soft",
+  primary:
+    "border border-brand-700 text-white bg-brand bg-gradient-to-b from-white/20 to-transparent " +
+    "shadow-[0_1px_2px_rgba(13,24,38,0.18),inset_0_1px_0_rgba(255,255,255,0.24)] " +
+    "hover:from-transparent hover:bg-brand-600",
+  light:
+    "border border-line-strong text-ink bg-white shadow-[0_1px_2px_rgba(13,24,38,0.07)] " +
+    "hover:bg-surface-soft",
+  outline:
+    "border border-line-strong text-ink bg-white shadow-[0_1px_2px_rgba(13,24,38,0.07)] " +
+    "hover:bg-surface-muted",
+  dark:
+    "border border-white/10 text-white bg-ink bg-gradient-to-b from-white/12 to-transparent " +
+    "shadow-[0_1px_2px_rgba(13,24,38,0.35),inset_0_1px_0_rgba(255,255,255,0.14)] " +
+    "hover:bg-ink-soft",
   ghost: "text-ink hover:bg-surface-muted",
 };
 
