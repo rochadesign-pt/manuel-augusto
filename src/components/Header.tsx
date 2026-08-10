@@ -106,8 +106,7 @@ export function Header({ settings }: { settings: SiteSettings }) {
           ) : (
             <Button
               href="/contactos"
-              variant="dark"
-              arrowUp
+              variant="primary"
               magnetic
               className="hidden sm:inline-flex"
             >

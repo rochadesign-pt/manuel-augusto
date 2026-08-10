@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 const FONTS = [
   { id: "bricolage", label: "Bricolage", tag: "atual", var: "--font-bricolage" },
+  { id: "overused", label: "Overused Grotesk", tag: "grotesca", var: "--font-overused" },
   { id: "inter", label: "Inter", tag: "neutra", var: "--font-inter" },
   { id: "figtree", label: "Figtree", tag: "amigável", var: "--font-figtree" },
   { id: "onest", label: "Onest", tag: "moderna", var: "--font-onest" },
@@ -16,8 +17,11 @@ const FONTS = [
   { id: "sora", label: "Sora", tag: "geométrica", var: "--font-sora" },
 ] as const;
 
+const WEIGHTS = [400, 500, 600, 700, 800] as const;
+
 const FONT_KEY = "ma-type-font";
 const TRACK_KEY = "ma-type-track";
+const WEIGHT_KEY = "ma-type-weight";
 const FLAG_KEY = "ma-tweaks";
 
 function applyFont(id: string) {
@@ -30,6 +34,19 @@ function applyFont(id: string) {
 function applyTrack(v: number) {
   document.documentElement.style.setProperty("--display-tracking", `${v / 1000}em`);
 }
+function applyWeight(v: number) {
+  document.documentElement.style.setProperty("--display-weight", String(v));
+}
+
+/** Force headings to honour the live weight variable (overrides utilities). */
+function ensureWeightStyle() {
+  if (document.getElementById("ma-type-weight-style")) return;
+  const el = document.createElement("style");
+  el.id = "ma-type-weight-style";
+  el.textContent =
+    "h1,h2,h3,h4{font-weight:var(--display-weight,600)!important}";
+  document.head.appendChild(el);
+}
 
 /**
  * Live typography preview panel. Hidden from visitors — revealed with
@@ -41,11 +58,14 @@ export function TypeTweaks() {
   const [open, setOpen] = useState(false);
   const [font, setFont] = useState("bricolage");
   const [track, setTrack] = useState(-25);
+  const [weight, setWeight] = useState(600);
 
   // Apply saved preferences on every load (even with the panel hidden).
   useEffect(() => {
+    ensureWeightStyle();
     const savedFont = localStorage.getItem(FONT_KEY);
     const savedTrack = localStorage.getItem(TRACK_KEY);
+    const savedWeight = localStorage.getItem(WEIGHT_KEY);
     if (savedFont) {
       setFont(savedFont);
       applyFont(savedFont);
@@ -54,6 +74,11 @@ export function TypeTweaks() {
       const t = Number(savedTrack);
       setTrack(t);
       applyTrack(t);
+    }
+    if (savedWeight) {
+      const w = Number(savedWeight);
+      setWeight(w);
+      applyWeight(w);
     }
 
     // Visible by default; only hidden if the user chose to hide it.
@@ -91,9 +116,15 @@ export function TypeTweaks() {
     applyTrack(v);
     localStorage.setItem(TRACK_KEY, String(v));
   }
+  function changeWeight(v: number) {
+    setWeight(v);
+    applyWeight(v);
+    localStorage.setItem(WEIGHT_KEY, String(v));
+  }
   function reset() {
     chooseFont("bricolage");
     changeTrack(-25);
+    changeWeight(600);
   }
 
   if (!enabled) return null;
@@ -161,6 +192,28 @@ export function TypeTweaks() {
                 onChange={(e) => changeTrack(Number(e.target.value))}
                 className="mt-1.5 w-full accent-[var(--color-brand)]"
               />
+            </div>
+
+            <div className="mt-4">
+              <label className="mb-1.5 block text-[11px] font-medium text-ink-soft">
+                Peso
+              </label>
+              <div className="flex gap-1">
+                {WEIGHTS.map((w) => (
+                  <button
+                    key={w}
+                    onClick={() => changeWeight(w)}
+                    style={{ fontWeight: w }}
+                    className={`flex-1 rounded-md border py-1.5 text-xs transition-colors ${
+                      weight === w
+                        ? "border-brand bg-brand-soft text-ink"
+                        : "border-line text-muted hover:border-line-strong"
+                    }`}
+                  >
+                    {w}
+                  </button>
+                ))}
+              </div>
             </div>
 
             <div className="mt-4 flex items-center justify-between">

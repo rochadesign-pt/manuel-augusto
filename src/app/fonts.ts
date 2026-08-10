@@ -10,6 +10,7 @@ import {
   Sora,
   Space_Grotesk,
 } from "next/font/google";
+import localFont from "next/font/local";
 
 export const inter = Inter({
   subsets: ["latin"],
@@ -88,5 +89,14 @@ export const familjen = Familjen_Grotesk({
   display: "swap",
   weight: ["400", "500", "600", "700"],
   variable: "--font-familjen",
+  preload: false,
+});
+
+// Self-hosted (open-source, not on Google Fonts). Variable weight 300–900.
+export const overused = localFont({
+  src: "./fonts/OverusedGrotesk-VF.woff2",
+  variable: "--font-overused",
+  weight: "300 900",
+  display: "swap",
   preload: false,
 });

@@ -9,6 +9,7 @@ import {
   inter,
   karla,
   onest,
+  overused,
   schibsted,
   sora,
   spaceGrotesk,
@@ -59,6 +60,7 @@ export default function RootLayout({
         hanken.variable,
         schibsted.variable,
         familjen.variable,
+        overused.variable,
       ].join(" ")}
     >
       <body>{children}</body>
