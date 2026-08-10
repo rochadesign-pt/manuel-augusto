@@ -11,7 +11,7 @@ export function StatementBand({ lead, emphasis, body }: StatementBandProps) {
   return (
     <section className="bg-navy py-20 text-white md:py-24">
       <div className="container-page grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:items-end">
-        <Reveal>
+        <Reveal className="border-l-2 border-brand pl-5 md:pl-6">
           <h2 className="font-display text-2xl font-semibold leading-snug md:text-[2rem] md:leading-[1.25]">
             {lead}{" "}
             <span className="text-white/45">{emphasis}</span>

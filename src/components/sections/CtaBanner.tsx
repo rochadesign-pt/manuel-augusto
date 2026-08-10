@@ -12,9 +12,16 @@ export function CtaBanner({
   text = "Fale connosco, teremos todo o gosto em dar-lhe uma resposta rápida, com conhecimento e garantia.",
 }: CtaBannerProps) {
   return (
-    <section className="relative z-10 bg-white pb-0 pt-20 md:pt-28">
-      <div className="container-page">
-        <Reveal className="relative mb-[-6rem] overflow-hidden rounded-4xl bg-brand md:mb-[-10rem]">
+    <section className="relative bg-white pt-20 md:pt-28">
+      {/* Navy pedestal at the bottom — seamlessly continues into the footer, so
+          the card's lower portion reads as overlapping the dark footer. Kept
+          inside this section to avoid cross-stacking-context z-index issues. */}
+      <div
+        aria-hidden
+        className="absolute inset-x-0 bottom-0 h-32 bg-navy md:h-48"
+      />
+      <div className="container-page relative z-10">
+        <Reveal className="relative overflow-hidden rounded-4xl bg-brand">
           <div
             aria-hidden
             className="pointer-events-none absolute inset-0 opacity-[0.15]"
