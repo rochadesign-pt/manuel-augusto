@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { Logo } from "./Logo";
+import { NewsletterForm } from "./NewsletterForm";
 import { footerNav } from "@/lib/nav";
 import type { SiteSettings } from "@/lib/types";
 
@@ -8,9 +9,9 @@ const YEAR = 2025;
 
 export function Footer({ settings }: { settings: SiteSettings }) {
   return (
-    <footer id="contacto" className="bg-navy text-white/70">
-      <div className="container-page py-16 md:py-20">
-        <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+    <footer id="contacto" className="relative overflow-hidden bg-navy text-white/70">
+      <div className="container-page relative z-10 pt-16 md:pt-20">
+        <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr_1fr_1.3fr]">
           <div className="max-w-xs">
             <Logo
               companyName={settings.companyName}
@@ -20,6 +21,20 @@ export function Footer({ settings }: { settings: SiteSettings }) {
             <p className="mt-5 text-sm leading-relaxed text-white/60">
               {settings.footerBlurb}
             </p>
+            <div className="mt-6 flex gap-2.5">
+              {settings.socials.map((s) => (
+                <a
+                  key={s.platform}
+                  href={s.url}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label={s.platform}
+                  className="grid size-9 place-items-center rounded-full border border-white/10 bg-white/5 text-white/70 transition-colors hover:bg-white/10 hover:text-white"
+                >
+                  <SocialIcon platform={s.platform} />
+                </a>
+              ))}
+            </div>
           </div>
 
           <FooterCol title="Contactos">
@@ -41,40 +56,30 @@ export function Footer({ settings }: { settings: SiteSettings }) {
                 {settings.email}
               </a>
             )}
+            <p className="mt-3 text-white/50">{settings.hoursWeek}</p>
+            <p className="text-white/50">{settings.hoursSat}</p>
           </FooterCol>
 
-          <FooterCol title="Horário">
-            <p>{settings.hoursWeek}</p>
-            <p>{settings.hoursSat}</p>
-            <div className="mt-4 space-y-2">
-              {footerNav.slice(0, 4).map((l) => (
-                <Link
-                  key={l.href}
-                  href={l.href}
-                  className="block transition-colors hover:text-white"
-                >
-                  {l.label}
-                </Link>
-              ))}
-            </div>
-          </FooterCol>
-
-          <FooterCol title="Acompanhe-nos">
-            <ul className="space-y-2.5">
-              {settings.socials.map((s) => (
-                <li key={s.platform}>
-                  <a
-                    href={s.url}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="inline-flex items-center gap-2.5 transition-colors hover:text-white"
+          <FooterCol title="Navegação">
+            <ul className="space-y-2">
+              {footerNav.map((l) => (
+                <li key={l.href}>
+                  <Link
+                    href={l.href}
+                    className="transition-colors hover:text-white"
                   >
-                    <SocialIcon platform={s.platform} />
-                    {s.platform}
-                  </a>
+                    {l.label}
+                  </Link>
                 </li>
               ))}
             </ul>
+          </FooterCol>
+
+          <FooterCol title="Novidades">
+            <p className="mb-4 text-white/60">
+              Dicas e novidades sobre eletrodomésticos e assistência — sem spam.
+            </p>
+            <NewsletterForm />
           </FooterCol>
         </div>
 
@@ -94,6 +99,19 @@ export function Footer({ settings }: { settings: SiteSettings }) {
             </Link>
           </div>
         </div>
+      </div>
+
+      {/* Oversized faded wordmark */}
+      <div
+        aria-hidden
+        className="pointer-events-none relative z-0 mt-6 select-none overflow-hidden"
+      >
+        <p
+          className="translate-y-[0.2em] whitespace-nowrap text-center font-display font-bold leading-[0.8] text-white/[0.045]"
+          style={{ fontSize: "clamp(4rem, 19vw, 17rem)", letterSpacing: "-0.04em" }}
+        >
+          Manuel Augusto
+        </p>
       </div>
     </footer>
   );

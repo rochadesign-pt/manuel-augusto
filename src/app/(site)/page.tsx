@@ -1,6 +1,7 @@
 import { Reveal } from "@/components/Reveal";
 import { SplitReveal } from "@/components/motion/SplitReveal";
 import { Parallax } from "@/components/motion/Parallax";
+import { AssistanceShowcase } from "@/components/sections/AssistanceShowcase";
 import { BrandsMarquee } from "@/components/sections/BrandsMarquee";
 import { PageClosing } from "@/components/sections/PageClosing";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
@@ -22,6 +23,7 @@ export default async function HomePage() {
       <HomeHero />
       <BrandsMarquee brands={brands} />
       <ServicesGrid services={services} />
+      <AssistanceShowcase />
       <ComfortBand />
       <StatsShowcase stats={stats} />
       <PageClosing />
