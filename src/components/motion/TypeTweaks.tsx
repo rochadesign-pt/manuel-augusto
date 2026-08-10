@@ -5,8 +5,14 @@ import { useEffect, useState } from "react";
 
 const FONTS = [
   { id: "bricolage", label: "Bricolage", tag: "atual", var: "--font-bricolage" },
-  { id: "fraunces", label: "Fraunces", tag: "editorial", var: "--font-fraunces" },
+  { id: "inter", label: "Inter", tag: "neutra", var: "--font-inter" },
+  { id: "figtree", label: "Figtree", tag: "amigável", var: "--font-figtree" },
+  { id: "onest", label: "Onest", tag: "moderna", var: "--font-onest" },
+  { id: "karla", label: "Karla", tag: "grotesca", var: "--font-karla" },
   { id: "space", label: "Space Grotesk", tag: "técnica", var: "--font-space-grotesk" },
+  { id: "hanken", label: "Hanken Grotesk", tag: "grotesca", var: "--font-hanken" },
+  { id: "schibsted", label: "Schibsted", tag: "grotesca", var: "--font-schibsted" },
+  { id: "familjen", label: "Familjen", tag: "grotesca", var: "--font-familjen" },
   { id: "sora", label: "Sora", tag: "geométrica", var: "--font-sora" },
 ] as const;
 

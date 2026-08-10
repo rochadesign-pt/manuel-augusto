@@ -1,7 +1,18 @@
 import type { Metadata, Viewport } from "next";
 
 import "./globals.css";
-import { display, fraunces, inter, sora, spaceGrotesk } from "./fonts";
+import {
+  display,
+  familjen,
+  figtree,
+  hanken,
+  inter,
+  karla,
+  onest,
+  schibsted,
+  sora,
+  spaceGrotesk,
+} from "./fonts";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://manuelaugusto.pt"),
@@ -37,7 +48,18 @@ export default function RootLayout({
   return (
     <html
       lang="pt"
-      className={`${inter.variable} ${display.variable} ${fraunces.variable} ${spaceGrotesk.variable} ${sora.variable}`}
+      className={[
+        inter.variable,
+        display.variable,
+        spaceGrotesk.variable,
+        sora.variable,
+        figtree.variable,
+        karla.variable,
+        onest.variable,
+        hanken.variable,
+        schibsted.variable,
+        familjen.variable,
+      ].join(" ")}
     >
       <body>{children}</body>
     </html>
