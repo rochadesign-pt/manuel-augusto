@@ -16,8 +16,13 @@ export function Header({ settings }: { settings: SiteSettings }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
+  // Only the homepage has a full-bleed dark hero to overlay.
+  const transparentCapable = pathname === "/";
+  const solid = !transparentCapable || scrolled;
+  const onDark = !solid;
+
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
+    const onScroll = () => setScrolled(window.scrollY > 24);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -37,14 +42,18 @@ export function Header({ settings }: { settings: SiteSettings }) {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 transition-colors duration-300",
-        scrolled
+        "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
+        solid
           ? "border-b border-line bg-white/85 backdrop-blur-md"
-          : "border-b border-transparent bg-white/0",
+          : "border-b border-transparent bg-transparent",
       )}
     >
       <div className="container-page flex h-16 items-center justify-between gap-4 md:h-[72px]">
-        <Logo companyName={settings.companyName} shortName={settings.shortName} />
+        <Logo
+          companyName={settings.companyName}
+          shortName={settings.shortName}
+          variant={onDark ? "light" : "dark"}
+        />
 
         <nav className="hidden items-center gap-0.5 lg:flex">
           {mainNav.map((link) => {
@@ -58,15 +67,22 @@ export function Header({ settings }: { settings: SiteSettings }) {
                 href={link.href}
                 className={cn(
                   "relative rounded-lg px-3 py-2 text-[13px] font-medium transition-colors",
-                  active
-                    ? "text-ink"
-                    : "text-muted hover:text-ink",
+                  onDark
+                    ? active
+                      ? "text-white"
+                      : "text-white/70 hover:text-white"
+                    : active
+                      ? "text-ink"
+                      : "text-muted hover:text-ink",
                 )}
               >
                 {active && (
                   <motion.span
                     layoutId="nav-active"
-                    className="absolute inset-0 -z-10 rounded-lg bg-surface-muted"
+                    className={cn(
+                      "absolute inset-0 -z-10 rounded-lg",
+                      onDark ? "bg-white/15" : "bg-surface-muted",
+                    )}
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
                 )}
@@ -77,22 +93,38 @@ export function Header({ settings }: { settings: SiteSettings }) {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Button
-            href="/contactos"
-            variant="dark"
-            arrowUp
-            magnetic
-            className="hidden sm:inline-flex"
-          >
-            Fala connosco
-          </Button>
+          {onDark ? (
+            <Button
+              href="/contactos"
+              variant="ghost"
+              arrowUp
+              className="hidden border border-white/50 text-white hover:bg-white/10 sm:inline-flex"
+            >
+              Fala connosco
+            </Button>
+          ) : (
+            <Button
+              href="/contactos"
+              variant="dark"
+              arrowUp
+              magnetic
+              className="hidden sm:inline-flex"
+            >
+              Fala connosco
+            </Button>
+          )}
 
           <button
             type="button"
             aria-label={open ? "Fechar menu" : "Abrir menu"}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="grid size-10 place-items-center rounded-full border border-line text-ink lg:hidden"
+            className={cn(
+              "grid size-10 place-items-center rounded-lg border lg:hidden",
+              onDark
+                ? "border-white/30 text-white"
+                : "border-line text-ink",
+            )}
           >
             <Burger open={open} />
           </button>
@@ -107,7 +139,7 @@ export function Header({ settings }: { settings: SiteSettings }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-x-0 top-16 bottom-0 z-40 bg-white lg:hidden"
+            className="fixed inset-x-0 bottom-0 top-16 z-40 bg-white lg:hidden"
           >
             <nav className="container-page flex flex-col gap-1 py-6">
               {mainNav.map((link, i) => (

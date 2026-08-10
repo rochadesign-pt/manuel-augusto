@@ -34,7 +34,7 @@ export function ServicesGrid({ services }: { services: Service[] }) {
           initial={reduce ? false : "hidden"}
           whileInView={reduce ? undefined : "show"}
           viewport={{ once: true, margin: "-10%" }}
-          className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4"
+          className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4 md:mt-24"
         >
           {services.map((service) => (
             <motion.li
