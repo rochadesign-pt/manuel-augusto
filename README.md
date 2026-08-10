@@ -31,8 +31,23 @@ mesmo sem Sanity configurado.
 | `/servicos` | Serviços (+ voucher E-Lar) |
 | `/eletrodomesticos` | Eletrodomésticos (+ catálogos) |
 | `/material-eletrico` | Distribuição de Material Elétrico |
+| `/apoio-tecnico` | Assistência Técnica |
+| `/contactos` | Contactos (formulário + localização) |
 | `/noticias` · `/noticias/[slug]` | Notícias (blog) |
 | `/studio` | Painel de edição Sanity |
+
+## Formulário de contacto
+
+O formulário em `/contactos` funciona logo (valida e confirma o envio). Para
+**receber os emails**, defina no Vercel:
+
+```
+RESEND_API_KEY=...            # https://resend.com
+CONTACT_TO_EMAIL=geral@...    # destinatário
+CONTACT_FROM_EMAIL=site@...   # remetente de um domínio verificado no Resend
+```
+
+Sem estas variáveis, o envio é aceite na mesma (registado no log) — nada quebra.
 
 ## CMS — o que o cliente pode editar
 
