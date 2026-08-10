@@ -8,6 +8,9 @@ export function Testimonials({ items }: { items: Testimonial[] }) {
     <section className="bg-surface-muted py-20 md:py-28">
       <div className="container-page">
         <div className="mx-auto max-w-2xl text-center">
+          <div className="mb-4 flex justify-center">
+            <span className="eyebrow">Testemunhos</span>
+          </div>
           <SplitReveal
             as="h2"
             text="A confiança conquista-se com o tempo."
