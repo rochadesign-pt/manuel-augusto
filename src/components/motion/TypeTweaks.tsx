@@ -31,8 +31,8 @@ function applyTrack(v: number) {
  * face is stored locally, so it previews only for the person tuning it.
  */
 export function TypeTweaks() {
-  const [enabled, setEnabled] = useState(false);
-  const [open, setOpen] = useState(true);
+  const [enabled, setEnabled] = useState(true);
+  const [open, setOpen] = useState(false);
   const [font, setFont] = useState("bricolage");
   const [track, setTrack] = useState(-25);
 
@@ -50,17 +50,17 @@ export function TypeTweaks() {
       applyTrack(t);
     }
 
+    // Visible by default; only hidden if the user chose to hide it.
     const params = new URLSearchParams(window.location.search);
-    const on =
-      params.has("tweaks") || localStorage.getItem(FLAG_KEY) === "1";
-    if (params.has("tweaks")) localStorage.setItem(FLAG_KEY, "1");
-    setEnabled(on);
+    if (params.has("tweaks")) localStorage.removeItem(FLAG_KEY);
+    if (localStorage.getItem(FLAG_KEY) === "hidden") setEnabled(false);
 
     const onKey = (e: KeyboardEvent) => {
       if (e.shiftKey && (e.key === "T" || e.key === "t")) {
         setEnabled((v) => {
           const next = !v;
-          localStorage.setItem(FLAG_KEY, next ? "1" : "0");
+          if (next) localStorage.removeItem(FLAG_KEY);
+          else localStorage.setItem(FLAG_KEY, "hidden");
           return next;
         });
         setOpen(true);
@@ -69,6 +69,11 @@ export function TypeTweaks() {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, []);
+
+  function hidePanel() {
+    localStorage.setItem(FLAG_KEY, "hidden");
+    setEnabled(false);
+  }
 
   function chooseFont(id: string) {
     setFont(id);
@@ -159,8 +164,16 @@ export function TypeTweaks() {
               >
                 Repor
               </button>
-              <span className="text-[10px] text-muted-2">Só visível para ti</span>
+              <button
+                onClick={hidePanel}
+                className="text-xs font-medium text-muted hover:text-ink"
+              >
+                Ocultar
+              </button>
             </div>
+            <p className="mt-2 text-[10px] text-muted-2">
+              Só visível para ti · Shift + T para reabrir
+            </p>
           </motion.div>
         ) : (
           <motion.button
@@ -168,11 +181,15 @@ export function TypeTweaks() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             onClick={() => setOpen(true)}
-            className="grid size-11 place-items-center rounded-full border border-line bg-white/95 text-ink shadow-card backdrop-blur"
+            className="flex items-center gap-2 rounded-full border border-line bg-white/95 px-4 py-2.5 text-ink shadow-card backdrop-blur transition-colors hover:border-brand"
             aria-label="Abrir painel de tipografia"
-            style={{ fontFamily: "var(--font-display)" }}
           >
-            <span className="text-lg font-bold">Aa</span>
+            <span className="text-base font-bold" style={{ fontFamily: "var(--font-display)" }}>
+              Aa
+            </span>
+            <span className="text-xs font-semibold" style={{ fontFamily: "var(--font-inter), sans-serif" }}>
+              Tipografia
+            </span>
           </motion.button>
         )}
       </AnimatePresence>
