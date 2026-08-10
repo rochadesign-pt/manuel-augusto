@@ -20,7 +20,7 @@ export function FaqSection({ items }: { items: Faq[] }) {
             nossos serviços. Caso ainda persista alguma dúvida, não hesite em
             falar com a nossa equipa!
           </p>
-          <Button href="#contacto" variant="primary" className="mt-6">
+          <Button href="/contactos" variant="primary" className="mt-6">
             Entrar em contacto
           </Button>
         </div>

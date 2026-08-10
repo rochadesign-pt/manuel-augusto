@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/Reveal";
+import { SplitReveal } from "@/components/motion/SplitReveal";
 import { Button } from "@/components/ui/Button";
 import { CountUp } from "@/components/ui/CountUp";
 import { Media } from "@/components/ui/Media";
@@ -12,12 +13,14 @@ export function StatsShowcase({ stats }: { stats: Stat[] }) {
     <section className="py-20 md:py-28">
       <div className="container-page">
         <div className="grid gap-8 lg:grid-cols-2 lg:items-end">
-          <Reveal>
+          <div>
             <p className="eyebrow">Nossos números</p>
-            <h2 className="mt-3 text-3xl font-semibold md:text-[2.5rem] md:leading-[1.1]">
-              Décadas de experiência ao serviço de quem confia em nós.
-            </h2>
-          </Reveal>
+            <SplitReveal
+              as="h2"
+              text="Décadas de experiência ao serviço de quem confia em nós."
+              className="mt-3 text-3xl font-semibold md:text-[2.5rem] md:leading-[1.1]"
+            />
+          </div>
           <Reveal delay={0.1} className="lg:pb-2">
             <p className="text-muted">
               Desde 1960 que fazemos o que sabemos melhor: ajudar pessoas e

@@ -46,7 +46,7 @@ export function Header({ settings }: { settings: SiteSettings }) {
       <div className="container-page flex h-16 items-center justify-between gap-4 md:h-[72px]">
         <Logo companyName={settings.companyName} shortName={settings.shortName} />
 
-        <nav className="hidden items-center gap-1 lg:flex">
+        <nav className="hidden items-center gap-0.5 lg:flex">
           {mainNav.map((link) => {
             const active =
               link.href === "/"
@@ -57,7 +57,7 @@ export function Header({ settings }: { settings: SiteSettings }) {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "relative rounded-full px-3.5 py-2 text-sm font-medium transition-colors",
+                  "relative rounded-full px-3 py-2 text-[13px] font-medium transition-colors",
                   active
                     ? "text-ink"
                     : "text-muted hover:text-ink",
@@ -78,9 +78,10 @@ export function Header({ settings }: { settings: SiteSettings }) {
 
         <div className="flex items-center gap-2">
           <Button
-            href={`tel:${settings.phone.replace(/\s/g, "")}`}
-            external
-            variant="primary"
+            href="/contactos"
+            variant="dark"
+            arrowUp
+            magnetic
             className="hidden sm:inline-flex"
           >
             Fala connosco
@@ -125,12 +126,21 @@ export function Header({ settings }: { settings: SiteSettings }) {
                 </motion.div>
               ))}
               <Button
-                href={`tel:${settings.phone.replace(/\s/g, "")}`}
-                external
+                href="/contactos"
                 size="lg"
+                arrowUp
                 className="mt-6 w-full"
               >
                 Fala connosco
+              </Button>
+              <Button
+                href={`tel:${settings.phone.replace(/\s/g, "")}`}
+                external
+                variant="outline"
+                size="lg"
+                className="mt-3 w-full"
+              >
+                Ligar {settings.phone}
               </Button>
             </nav>
           </motion.div>

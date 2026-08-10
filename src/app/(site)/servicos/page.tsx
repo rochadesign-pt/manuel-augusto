@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { Reveal } from "@/components/Reveal";
+import { SplitReveal } from "@/components/motion/SplitReveal";
 import { FeatureRows } from "@/components/sections/FeatureRows";
 import { PageClosing } from "@/components/sections/PageClosing";
 import { Button } from "@/components/ui/Button";
@@ -17,28 +18,34 @@ export default function ServicosPage() {
     <>
       <section className="pt-28 md:pt-32">
         <div className="container-page grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-          <Reveal>
-            <h1 className="text-4xl font-semibold leading-[1.05] md:text-[3.25rem]">
-              Da venda à assistência, ajudar é o que nos move.
-            </h1>
-            <p className="mt-5 max-w-md text-muted">
-              Dúvidas, informações, damos conta de tudo. A nossa equipa está
-              sempre disponível para o assistir e acompanhar.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Button href="#contacto" variant="primary">
-                Fala connosco
-              </Button>
-              <Button href="/eletrodomesticos" variant="outline" arrow>
-                Ver produtos
-              </Button>
-            </div>
-          </Reveal>
+          <div>
+            <SplitReveal
+              as="h1"
+              trigger="load"
+              text="Da venda à assistência, ajudar é o que nos move."
+              className="text-4xl font-semibold leading-[1.05] md:text-[3.25rem]"
+            />
+            <Reveal delay={0.25}>
+              <p className="mt-5 max-w-md text-muted">
+                Dúvidas, informações, damos conta de tudo. A nossa equipa está
+                sempre disponível para o assistir e acompanhar.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Button href="/contactos" variant="primary" magnetic>
+                  Fala connosco
+                </Button>
+                <Button href="/eletrodomesticos" variant="outline" arrow>
+                  Ver produtos
+                </Button>
+              </div>
+            </Reveal>
+          </div>
 
           <Reveal delay={0.1}>
             <Media
               alt="Entrega e montagem de um frigorífico"
               tone="steel"
+              zoom
               className="aspect-[4/3] w-full"
               sizes="(max-width: 1024px) 100vw, 50vw"
               priority
@@ -56,7 +63,7 @@ export default function ServicosPage() {
       <FeatureRows
         heading={{
           title: "O seu conforto é o nosso objetivo.",
-          ctas: [{ label: "Começar", href: "#contacto", variant: "outline" }],
+          ctas: [{ label: "Começar", href: "/contactos", variant: "outline" }],
         }}
         rows={[
           {
@@ -111,7 +118,7 @@ function VoucherBand() {
             eLar. Fale connosco sem compromisso.
           </p>
           <div className="mt-6 flex justify-center">
-            <Button href="#contacto" variant="primary">
+            <Button href="/contactos" variant="primary">
               Entrar em contacto
             </Button>
           </div>

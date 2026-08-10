@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/Reveal";
+import { SplitReveal } from "@/components/motion/SplitReveal";
 import { Button } from "@/components/ui/Button";
 
 interface CtaBannerProps {
@@ -13,23 +14,35 @@ export function CtaBanner({
   return (
     <section className="bg-navy pb-0 pt-20 md:pt-28">
       <div className="container-page">
-        <Reveal className="relative overflow-hidden rounded-3xl bg-brand">
-          <div className="grid items-center gap-6 md:grid-cols-[1.2fr_0.8fr]">
-            <div className="p-8 md:p-12 lg:p-14">
-              <h2 className="max-w-md font-display text-2xl font-semibold text-white md:text-[2rem] md:leading-[1.15]">
-                {title}
-              </h2>
+        <Reveal className="relative overflow-hidden rounded-4xl bg-brand">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 opacity-[0.15]"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle, rgba(255,255,255,0.9) 1px, transparent 1px)",
+              backgroundSize: "22px 22px",
+            }}
+          />
+          <div className="relative grid items-center gap-6 md:grid-cols-[1.2fr_0.8fr]">
+            <div className="p-8 md:p-14 lg:p-16">
+              <span className="eyebrow text-white/60">Manuel Augusto &amp; Filhos</span>
+              <SplitReveal
+                as="h2"
+                text={title}
+                className="mt-4 max-w-md font-display text-2xl font-semibold text-white md:text-[2.25rem] md:leading-[1.12]"
+              />
               <p className="mt-4 max-w-md text-sm leading-relaxed text-white/75">
                 {text}
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Button href="/servicos" variant="light">
+                <Button href="/servicos" variant="light" magnetic>
                   Conhecer serviços
                 </Button>
                 <Button
-                  href="#contacto"
+                  href="/contactos"
                   variant="ghost"
-                  arrow
+                  arrowUp
                   className="text-white hover:bg-white/10"
                 >
                   Fala com técnico
@@ -37,7 +50,7 @@ export function CtaBanner({
               </div>
             </div>
 
-            <div className="relative hidden h-full min-h-[320px] items-end justify-center md:flex">
+            <div className="relative hidden h-full min-h-[340px] items-end justify-center md:flex">
               <KettleArt />
             </div>
           </div>

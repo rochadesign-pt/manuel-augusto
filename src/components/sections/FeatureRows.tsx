@@ -1,6 +1,7 @@
 import type { Image as SanityImage } from "sanity";
 
 import { Reveal } from "@/components/Reveal";
+import { SplitReveal } from "@/components/motion/SplitReveal";
 import { Button } from "@/components/ui/Button";
 import { Media } from "@/components/ui/Media";
 import { cn } from "@/lib/utils";
@@ -25,11 +26,11 @@ export function FeatureRows({ heading, rows }: FeatureRowsProps) {
       <div className="container-page">
         {heading && (
           <div className="mb-14 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-            <Reveal>
-              <h2 className="max-w-md text-3xl font-semibold md:text-[2.5rem] md:leading-[1.1]">
-                {heading.title}
-              </h2>
-            </Reveal>
+            <SplitReveal
+              as="h2"
+              text={heading.title}
+              className="max-w-md text-3xl font-semibold md:text-[2.5rem] md:leading-[1.1]"
+            />
             {heading.ctas && (
               <Reveal delay={0.1} className="flex gap-3">
                 {heading.ctas.map((c) => (
@@ -50,15 +51,14 @@ export function FeatureRows({ heading, rows }: FeatureRowsProps) {
                 key={row.title}
                 className="grid items-center gap-8 md:grid-cols-2 md:gap-14"
               >
-                <Reveal
-                  className={cn(flip && "md:order-2")}
-                  y={20}
-                >
+                <Reveal className={cn(flip && "md:order-2")} y={20}>
                   <Media
                     image={row.image}
                     alt={row.title}
                     tone={flip ? "soft" : "steel"}
-                    className="aspect-[4/3] w-full"
+                    zoom
+                    rounded={false}
+                    className="aspect-[4/3] w-full rounded-[1.5rem]"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </Reveal>

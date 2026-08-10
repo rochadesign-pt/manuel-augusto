@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/Reveal";
+import { SplitReveal } from "@/components/motion/SplitReveal";
 import { Media } from "@/components/ui/Media";
 import type { Testimonial } from "@/lib/types";
 
@@ -6,23 +7,26 @@ export function Testimonials({ items }: { items: Testimonial[] }) {
   return (
     <section className="bg-surface-muted py-20 md:py-28">
       <div className="container-page">
-        <Reveal className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-semibold md:text-[2.5rem] md:leading-[1.1]">
-            A confiança conquista-se
-            <br className="hidden sm:block" /> com o tempo.
-          </h2>
-          <p className="mt-4 text-muted">
-            Mais do que clientes, temos relações que duram há décadas. É essa
-            proximidade que nos motiva a continuar a fazer bem o que fazemos.
-          </p>
-        </Reveal>
+        <div className="mx-auto max-w-2xl text-center">
+          <SplitReveal
+            as="h2"
+            text="A confiança conquista-se com o tempo."
+            className="text-3xl font-semibold md:text-[2.5rem] md:leading-[1.1]"
+          />
+          <Reveal delay={0.15}>
+            <p className="mt-4 text-muted">
+              Mais do que clientes, temos relações que duram há décadas. É essa
+              proximidade que nos motiva a continuar a fazer bem o que fazemos.
+            </p>
+          </Reveal>
+        </div>
 
         <div className="mt-14 grid gap-5 md:grid-cols-3">
           {items.map((t, i) => (
             <Reveal
               key={t.name + i}
               delay={i * 0.08}
-              className="flex h-full flex-col rounded-2xl bg-white p-6 shadow-card"
+              className="flex h-full flex-col rounded-[1.25rem] bg-white p-6 shadow-card ring-1 ring-ink/[0.04] transition-shadow duration-300 hover:shadow-soft"
             >
               <Stars rating={t.rating} />
               <p className="mt-4 flex-1 text-[15px] leading-relaxed text-ink-soft">

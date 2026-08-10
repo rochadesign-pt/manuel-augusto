@@ -44,8 +44,8 @@ export default async function EletrodomesticosPage() {
               "Fogões modernos e seguros",
             ],
             ctas: [
-              { label: "Ver mais", href: "#contacto", variant: "primary" },
-              { label: "Detalhes", href: "#contacto", variant: "outline" },
+              { label: "Ver mais", href: "/contactos", variant: "primary" },
+              { label: "Detalhes", href: "/contactos", variant: "outline" },
             ],
           },
           {
@@ -59,8 +59,8 @@ export default async function EletrodomesticosPage() {
               "Conforto e eficiência no dia a dia",
             ],
             ctas: [
-              { label: "Ver mais", href: "#contacto", variant: "primary" },
-              { label: "Detalhes", href: "#contacto", variant: "outline" },
+              { label: "Ver mais", href: "/contactos", variant: "primary" },
+              { label: "Detalhes", href: "/contactos", variant: "outline" },
             ],
           },
         ]}

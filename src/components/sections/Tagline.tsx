@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/Reveal";
+import { SplitReveal } from "@/components/motion/SplitReveal";
 
 export function Tagline({
   eyebrow = "Tagline",
@@ -12,12 +13,14 @@ export function Tagline({
   return (
     <section className="py-16 md:py-20">
       <div className="container-page grid gap-8 lg:grid-cols-[1fr_1fr] lg:items-start">
-        <Reveal>
+        <div>
           <p className="eyebrow">{eyebrow}</p>
-          <h2 className="mt-3 text-3xl font-semibold md:text-[2.25rem] md:leading-[1.15]">
-            {title}
-          </h2>
-        </Reveal>
+          <SplitReveal
+            as="h2"
+            text={title}
+            className="mt-3 text-3xl font-semibold md:text-[2.25rem] md:leading-[1.15]"
+          />
+        </div>
         <Reveal delay={0.1}>
           <p className="text-muted lg:pt-2">{body}</p>
         </Reveal>

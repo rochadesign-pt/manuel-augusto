@@ -8,6 +8,7 @@ export const mainNav: NavLink[] = [
   { label: "Serviços", href: "/servicos" },
   { label: "Eletrodomésticos", href: "/eletrodomesticos" },
   { label: "Material Elétrico", href: "/material-eletrico" },
+  { label: "Assistência", href: "/apoio-tecnico" },
   { label: "Notícias", href: "/noticias" },
 ];
 
@@ -17,5 +18,7 @@ export const footerNav: NavLink[] = [
   { label: "Serviços", href: "/servicos" },
   { label: "Eletrodomésticos", href: "/eletrodomesticos" },
   { label: "Material Elétrico", href: "/material-eletrico" },
+  { label: "Assistência técnica", href: "/apoio-tecnico" },
   { label: "Notícias", href: "/noticias" },
+  { label: "Contactos", href: "/contactos" },
 ];

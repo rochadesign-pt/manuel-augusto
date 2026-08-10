@@ -21,7 +21,7 @@ export function CatalogCards({ catalogs }: { catalogs: Catalog[] }) {
           <motion.a
             key={c.name}
             variants={staggerItem}
-            href={c.url ?? "#contacto"}
+            href={c.url ?? "/contactos"}
             target={c.url ? "_blank" : undefined}
             rel={c.url ? "noreferrer noopener" : undefined}
             whileHover={{ y: -6 }}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { Reveal } from "@/components/Reveal";
+import { SplitReveal } from "@/components/motion/SplitReveal";
 import { PageClosing } from "@/components/sections/PageClosing";
 import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
@@ -18,23 +19,28 @@ export default function SobrePage() {
     <>
       <section className="pt-28 md:pt-32">
         <div className="container-page">
-          <Reveal className="max-w-3xl">
-            <h1 className="text-4xl font-semibold leading-[1.05] md:text-[3.25rem]">
-              Uma história feita de trabalho, confiança e proximidade.
-            </h1>
-            <p className="mt-5 max-w-xl text-muted">
-              Desde 1960, ajudamos famílias e empresas a manter o essencial a
-              funcionar, com a mesma dedicação de sempre.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Button href="#contacto" variant="primary">
-                Fala connosco
-              </Button>
-              <Button href="/servicos" variant="outline" arrow>
-                Os nossos serviços
-              </Button>
-            </div>
-          </Reveal>
+          <div className="max-w-3xl">
+            <SplitReveal
+              as="h1"
+              trigger="load"
+              text="Uma história feita de trabalho, confiança e proximidade."
+              className="text-4xl font-semibold leading-[1.05] md:text-[3.25rem]"
+            />
+            <Reveal delay={0.25}>
+              <p className="mt-5 max-w-xl text-muted">
+                Desde 1960, ajudamos famílias e empresas a manter o essencial a
+                funcionar, com a mesma dedicação de sempre.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Button href="/contactos" variant="primary" magnetic>
+                  Fala connosco
+                </Button>
+                <Button href="/servicos" variant="outline" arrow>
+                  Os nossos serviços
+                </Button>
+              </div>
+            </Reveal>
+          </div>
 
           <Reveal delay={0.1} className="mt-12">
             <Media

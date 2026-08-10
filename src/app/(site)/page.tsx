@@ -1,4 +1,6 @@
 import { Reveal } from "@/components/Reveal";
+import { SplitReveal } from "@/components/motion/SplitReveal";
+import { Parallax } from "@/components/motion/Parallax";
 import { BrandsMarquee } from "@/components/sections/BrandsMarquee";
 import { PageClosing } from "@/components/sections/PageClosing";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
@@ -31,41 +33,49 @@ function HomeHero() {
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0">
-        <Media
-          alt="Técnicos da Manuel Augusto a instalar eletrodomésticos"
-          tone="steel"
-          priority
-          rounded={false}
-          className="h-full"
-          sizes="100vw"
-        />
+        <Parallax className="absolute inset-0" amount={6}>
+          <Media
+            alt="Técnicos da Manuel Augusto a instalar eletrodomésticos"
+            tone="steel"
+            priority
+            rounded={false}
+            className="h-full"
+            sizes="100vw"
+          />
+        </Parallax>
         <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-navy/10" />
       </div>
 
-      <div className="container-page relative flex min-h-[560px] flex-col justify-end pb-16 pt-28 md:min-h-[640px] md:pb-20">
-        <Reveal className="max-w-2xl">
-          <h1 className="text-4xl font-semibold leading-[1.08] text-white md:text-[3.25rem]">
-            Há mais de 60 anos a cuidar da energia e do conforto da sua casa.
-          </h1>
-          <p className="mt-5 max-w-xl text-base text-white/75 md:text-lg">
-            Desde 1960 que ajudamos as famílias de Ílhavo a escolher, manter e
-            reparar os seus eletrodomésticos.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Button href="#contacto" variant="light" size="lg">
-              Fala connosco
-            </Button>
-            <Button
-              href="/servicos"
-              variant="ghost"
-              size="lg"
-              arrow
-              className="border border-white/30 text-white hover:bg-white/10"
-            >
-              Fala com técnico
-            </Button>
-          </div>
-        </Reveal>
+      <div className="container-page relative flex min-h-[600px] flex-col justify-end pb-16 pt-28 md:min-h-[680px] md:pb-20">
+        <div className="max-w-3xl">
+          <SplitReveal
+            as="h1"
+            trigger="load"
+            stagger={0.05}
+            text="Há mais de 60 anos a cuidar da energia e do conforto da sua casa."
+            className="text-4xl font-semibold leading-[1.05] text-white md:text-[3.5rem]"
+          />
+          <Reveal delay={0.35}>
+            <p className="mt-6 max-w-xl text-base text-white/75 md:text-lg">
+              Desde 1960 que ajudamos as famílias de Ílhavo a escolher, manter e
+              reparar os seus eletrodomésticos.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Button href="/contactos" variant="light" size="lg" magnetic>
+                Fala connosco
+              </Button>
+              <Button
+                href="/apoio-tecnico"
+                variant="ghost"
+                size="lg"
+                arrowUp
+                className="border border-white/30 text-white hover:bg-white/10"
+              >
+                Fala com técnico
+              </Button>
+            </div>
+          </Reveal>
+        </div>
       </div>
     </section>
   );
@@ -94,7 +104,7 @@ function ComfortBand() {
             tudo contribui para um espaço mais cómodo e tranquilo.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button href="#contacto" variant="light">
+            <Button href="/contactos" variant="light">
               Entrar em contacto
             </Button>
             <Button

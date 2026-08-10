@@ -25,6 +25,8 @@ interface MediaProps {
   sizes?: string;
   priority?: boolean;
   rounded?: boolean;
+  zoom?: boolean;
+  ring?: boolean;
 }
 
 /**
@@ -44,6 +46,8 @@ export function Media({
   sizes = "100vw",
   priority = false,
   rounded = true,
+  zoom = false,
+  ring = true,
 }: MediaProps) {
   const url = image ? urlForImage(image)?.width(1600).url() : src;
   const t = TONES[tone];
@@ -51,8 +55,9 @@ export function Media({
   return (
     <div
       className={cn(
-        "relative isolate overflow-hidden bg-surface-muted",
+        "group/media relative isolate overflow-hidden bg-surface-muted",
         rounded && "rounded-2xl",
+        ring && "ring-1 ring-inset ring-ink/[0.06]",
         className,
       )}
     >
@@ -63,7 +68,12 @@ export function Media({
           fill
           sizes={sizes}
           priority={priority}
-          className={cn("object-cover", imgClassName)}
+          className={cn(
+            "object-cover",
+            zoom &&
+              "transition-transform duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover/media:scale-[1.05]",
+            imgClassName,
+          )}
         />
       ) : (
         <div

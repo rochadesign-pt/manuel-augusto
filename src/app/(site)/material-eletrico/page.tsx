@@ -41,8 +41,8 @@ export default function MaterialEletricoPage() {
               "Tomadas, fichas e material de instalação",
             ],
             ctas: [
-              { label: "Ver mais", href: "#contacto", variant: "primary" },
-              { label: "Detalhes", href: "#contacto", variant: "outline" },
+              { label: "Ver mais", href: "/contactos", variant: "primary" },
+              { label: "Detalhes", href: "/contactos", variant: "outline" },
             ],
           },
           {
@@ -56,8 +56,8 @@ export default function MaterialEletricoPage() {
               "Apoio tanto para particulares como profissionais",
             ],
             ctas: [
-              { label: "Ver mais", href: "#contacto", variant: "primary" },
-              { label: "Detalhes", href: "#contacto", variant: "outline" },
+              { label: "Ver mais", href: "/contactos", variant: "primary" },
+              { label: "Detalhes", href: "/contactos", variant: "outline" },
             ],
           },
         ]}

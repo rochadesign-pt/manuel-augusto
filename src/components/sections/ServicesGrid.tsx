@@ -5,6 +5,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
 import { staggerContainer, staggerItem } from "@/components/Reveal";
+import { SplitReveal } from "@/components/motion/SplitReveal";
 import type { Service } from "@/lib/types";
 
 export function ServicesGrid({ services }: { services: Service[] }) {
@@ -15,10 +16,11 @@ export function ServicesGrid({ services }: { services: Service[] }) {
         <div className="grid gap-8 lg:grid-cols-2 lg:items-end">
           <div>
             <p className="eyebrow">Soluções completas, da venda à assistência</p>
-            <h2 className="mt-3 text-3xl font-semibold md:text-[2.5rem] md:leading-[1.1]">
-              Estamos presentes
-              <br className="hidden sm:block" /> em cada etapa.
-            </h2>
+            <SplitReveal
+              as="h2"
+              text="Estamos presentes em cada etapa."
+              className="mt-3 text-3xl font-semibold md:text-[2.5rem] md:leading-[1.1]"
+            />
           </div>
           <p className="text-muted lg:pb-2">
             Trabalhamos todos os dias para que nada falhe na sua casa ou negócio.
