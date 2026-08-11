@@ -4,6 +4,7 @@ import { Reveal } from "@/components/Reveal";
 import { SplitReveal } from "@/components/motion/SplitReveal";
 import { FeatureRows } from "@/components/sections/FeatureRows";
 import { PageClosing } from "@/components/sections/PageClosing";
+import { ProcessSteps } from "@/components/sections/ProcessSteps";
 import { Button } from "@/components/ui/Button";
 import { Media } from "@/components/ui/Media";
 
@@ -80,6 +81,29 @@ export default function ServicosPage() {
             title: "Manutenção e assistência especializada",
             description:
               "Não junte técnico para garantir o funcionamento perfeito. A nossa equipa realiza uma análise completa do equipamento para identificar a causa do problema.",
+          },
+        ]}
+      />
+
+      <ProcessSteps
+        title="Simples, do primeiro contacto à entrega."
+        intro="Um processo transparente, sem surpresas — sabe sempre o que se segue."
+        steps={[
+          {
+            title: "Contacto",
+            text: "Fale connosco por telefone, e-mail ou na loja. Ouvimos o que precisa.",
+          },
+          {
+            title: "Diagnóstico",
+            text: "Avaliamos o equipamento ou o projeto e explicamos as opções com clareza.",
+          },
+          {
+            title: "Solução",
+            text: "Reparamos, fornecemos ou aconselhamos a escolha certa para si.",
+          },
+          {
+            title: "Entrega & garantia",
+            text: "Entregamos, montamos e garantimos o resultado, com acompanhamento.",
           },
         ]}
       />

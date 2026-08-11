@@ -2,7 +2,7 @@ import { Reveal } from "@/components/Reveal";
 import { SplitReveal } from "@/components/motion/SplitReveal";
 import { Button } from "@/components/ui/Button";
 import { CountUp } from "@/components/ui/CountUp";
-import { Media } from "@/components/ui/Media";
+import { Icon } from "@/components/ui/Icon";
 import type { Stat } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
@@ -39,33 +39,13 @@ export function StatsShowcase({ stats }: { stats: Stat[] }) {
           </Reveal>
         </div>
 
-        <div className="mt-14 grid gap-4 md:grid-cols-4 md:grid-rows-[190px_190px]">
+        <div className="mt-14 grid gap-4 md:grid-cols-3 md:grid-rows-[190px_190px]">
           {first && (
-            <StatCard
-              stat={first}
-              tone="navy"
-              className="md:col-span-1 md:row-span-2"
-            />
+            <StatCard stat={first} tone="navy" className="md:row-span-2" />
           )}
-          <Media
-            alt="Equipa técnica em ação"
-            tone="steel"
-            className="hidden md:col-span-2 md:block"
-          />
           {second && <StatCard stat={second} tone="soft" />}
-          {third && (
-            <StatCard stat={third} tone="brand" className="md:col-span-1" />
-          )}
-          <Media
-            alt="Assistência ao domicílio"
-            tone="steel"
-            className="hidden md:block"
-          />
-          <Media
-            alt="Instalação de eletrodomésticos"
-            tone="soft"
-            className="hidden md:block"
-          />
+          {third && <StatCard stat={third} tone="brand" />}
+          <HighlightCard className="md:col-span-2" />
         </div>
       </div>
     </section>
@@ -106,6 +86,30 @@ function StatCard({
       >
         {stat.label}
       </span>
+    </Reveal>
+  );
+}
+
+function HighlightCard({ className }: { className?: string }) {
+  return (
+    <Reveal
+      className={cn(
+        "flex flex-col justify-between rounded-2xl border border-line bg-white p-7 shadow-card md:p-8",
+        className,
+      )}
+    >
+      <div className="grid size-11 place-items-center rounded-lg border border-line bg-white text-brand shadow-[0_1px_2px_rgba(13,24,38,0.05)]">
+        <Icon name="wrench" className="size-5" />
+      </div>
+      <div>
+        <p className="font-display text-xl font-semibold text-ink md:text-2xl">
+          Equipa própria de assistência técnica, aqui em Ílhavo.
+        </p>
+        <p className="mt-2 max-w-md text-sm text-muted">
+          Diagnóstico honesto, reparação com peças de origem e garantia — sem
+          intermediários.
+        </p>
+      </div>
     </Reveal>
   );
 }
