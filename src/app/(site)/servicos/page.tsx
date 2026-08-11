@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 
 import { Reveal } from "@/components/Reveal";
 import { SplitReveal } from "@/components/motion/SplitReveal";
-import { FeatureRows } from "@/components/sections/FeatureRows";
 import { PageClosing } from "@/components/sections/PageClosing";
 import { ProcessSteps } from "@/components/sections/ProcessSteps";
+import { StickyFeatures } from "@/components/sections/StickyFeatures";
 import { Button } from "@/components/ui/Button";
 import { Media } from "@/components/ui/Media";
 
@@ -61,12 +61,14 @@ export default function ServicosPage() {
 
       <VoucherBand />
 
-      <FeatureRows
-        heading={{
-          title: "O seu conforto é o nosso objetivo.",
-          ctas: [{ label: "Começar", href: "/contactos", variant: "outline" }],
-        }}
-        rows={[
+      <StickyFeatures
+        title="O seu conforto é o nosso objetivo."
+        intro="Seja um novo eletrodoméstico, uma peça elétrica ou até uma reparação, estamos cá para ajudar."
+        ctas={[
+          { label: "Começar", href: "/contactos", variant: "primary" },
+          { label: "Detalhes", href: "/eletrodomesticos", variant: "outline" },
+        ]}
+        items={[
           {
             title: "Equipamentos que fazem a diferença no seu dia a dia",
             description:
@@ -80,7 +82,7 @@ export default function ServicosPage() {
           {
             title: "Manutenção e assistência especializada",
             description:
-              "Não junte técnico para garantir o funcionamento perfeito. A nossa equipa realiza uma análise completa do equipamento para identificar a causa do problema.",
+              "A nossa equipa garante o funcionamento perfeito. Realizamos uma análise completa do equipamento para identificar a causa do problema.",
           },
         ]}
       />
