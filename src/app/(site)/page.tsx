@@ -6,6 +6,7 @@ import { BrandsMarquee } from "@/components/sections/BrandsMarquee";
 import { PageClosing } from "@/components/sections/PageClosing";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { StatsShowcase } from "@/components/sections/StatsShowcase";
+import { TrustBadges } from "@/components/sections/TrustBadges";
 import { Button } from "@/components/ui/Button";
 import { Media } from "@/components/ui/Media";
 import { getBrands, getServices, getStats } from "@/lib/data";
@@ -24,6 +25,7 @@ export default async function HomePage() {
         <BrandsMarquee brands={brands} />
       </div>
       <ServicesGrid services={services} />
+      <TrustBadges />
       <AssistanceShowcase />
       <ComfortBand />
       <StatsShowcase stats={stats} />
