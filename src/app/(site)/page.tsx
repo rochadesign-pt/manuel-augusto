@@ -58,7 +58,7 @@ function HomeHero() {
             text="Há mais de 60 anos a cuidar da energia e do conforto da sua casa."
             className="text-4xl font-semibold leading-[1.05] text-white md:text-[3.5rem]"
           />
-          <Reveal delay={0.35}>
+          <Reveal load delay={0.35}>
             <p className="mt-6 max-w-xl text-base text-white/75 md:text-lg">
               Desde 1960 que ajudamos as famílias de Ílhavo a escolher, manter e
               reparar os seus eletrodomésticos.

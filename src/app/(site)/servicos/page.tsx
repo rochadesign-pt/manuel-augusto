@@ -26,7 +26,7 @@ export default function ServicosPage() {
               text="Da venda à assistência, ajudar é o que nos move."
               className="text-4xl font-semibold leading-[1.05] md:text-[3.25rem]"
             />
-            <Reveal delay={0.25}>
+            <Reveal load delay={0.25}>
               <p className="mt-5 max-w-md text-muted">
                 Dúvidas, informações, damos conta de tudo. A nossa equipa está
                 sempre disponível para o assistir e acompanhar.

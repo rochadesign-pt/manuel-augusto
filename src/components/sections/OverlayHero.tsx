@@ -92,7 +92,7 @@ export function OverlayHero({
             text={title}
             className="max-w-3xl font-display text-4xl font-semibold text-white md:text-[3.5rem]"
           />
-          <Reveal delay={0.2}>
+          <Reveal load delay={0.2}>
             <p className="mx-auto mt-5 max-w-lg text-white/75">{subtitle}</p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Button href={primaryHref} variant="light" magnetic>

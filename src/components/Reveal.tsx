@@ -11,6 +11,8 @@ interface RevealProps {
   delay?: number;
   y?: number;
   as?: "div" | "section" | "li" | "span";
+  /** Animate on mount instead of on scroll-into-view (for above-the-fold content). */
+  load?: boolean;
 }
 
 export function Reveal({
@@ -19,6 +21,7 @@ export function Reveal({
   delay = 0,
   y = 24,
   as = "div",
+  load = false,
 }: RevealProps) {
   const reduce = useReducedMotion();
   const MotionTag = motion[as];
@@ -26,6 +29,21 @@ export function Reveal({
   // With reduced motion, render content immediately visible (no reveal).
   if (reduce) {
     return <MotionTag className={className}>{children}</MotionTag>;
+  }
+
+  // Above-the-fold content animates on mount so it can never get stuck
+  // invisible when it sits in the viewport's excluded trigger margin.
+  if (load) {
+    return (
+      <MotionTag
+        className={className}
+        initial={{ opacity: 0, y }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: EASE, delay }}
+      >
+        {children}
+      </MotionTag>
+    );
   }
 
   return (

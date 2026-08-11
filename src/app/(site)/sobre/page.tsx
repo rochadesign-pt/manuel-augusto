@@ -26,7 +26,7 @@ export default function SobrePage() {
               text="Uma história feita de trabalho, confiança e proximidade."
               className="text-4xl font-semibold leading-[1.05] md:text-[3.25rem]"
             />
-            <Reveal delay={0.25}>
+            <Reveal load delay={0.25}>
               <p className="mt-5 max-w-xl text-muted">
                 Desde 1960, ajudamos famílias e empresas a manter o essencial a
                 funcionar, com a mesma dedicação de sempre.
