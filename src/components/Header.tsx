@@ -19,7 +19,8 @@ export function Header({ settings }: { settings: SiteSettings }) {
   // Pages whose top is a full-bleed dark hero the header can overlay.
   const DARK_HERO = ["/", "/apoio-tecnico", "/eletrodomesticos", "/material-eletrico"];
   const transparentCapable = DARK_HERO.includes(pathname);
-  const solid = !transparentCapable || scrolled;
+  // An open mobile menu always forces the solid (opaque) header.
+  const solid = !transparentCapable || scrolled || open;
   const onDark = !solid;
 
   useEffect(() => {
@@ -44,9 +45,11 @@ export function Header({ settings }: { settings: SiteSettings }) {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
-        solid
-          ? "border-b border-line bg-white/85 backdrop-blur-md"
-          : "border-b border-transparent bg-transparent",
+        open
+          ? "border-b border-line bg-white"
+          : solid
+            ? "border-b border-line bg-white/85 backdrop-blur-md"
+            : "border-b border-transparent bg-transparent",
       )}
     >
       <div className="container-page flex h-16 items-center justify-between gap-4 md:h-[72px]">
@@ -94,25 +97,26 @@ export function Header({ settings }: { settings: SiteSettings }) {
         </nav>
 
         <div className="flex items-center gap-2">
-          {onDark ? (
-            <Button
-              href="/contactos"
-              variant="ghost"
-              arrowUp
-              className="hidden border border-white/50 text-white hover:bg-white/10 sm:inline-flex"
-            >
-              Fala connosco
-            </Button>
-          ) : (
-            <Button
-              href="/contactos"
-              variant="primary"
-              magnetic
-              className="hidden sm:inline-flex"
-            >
-              Fala connosco
-            </Button>
-          )}
+          {!open &&
+            (onDark ? (
+              <Button
+                href="/contactos"
+                variant="ghost"
+                arrowUp
+                className="hidden border border-white/50 text-white hover:bg-white/10 sm:inline-flex"
+              >
+                Fala connosco
+              </Button>
+            ) : (
+              <Button
+                href="/contactos"
+                variant="primary"
+                magnetic
+                className="hidden sm:inline-flex"
+              >
+                Fala connosco
+              </Button>
+            ))}
 
           <button
             type="button"
