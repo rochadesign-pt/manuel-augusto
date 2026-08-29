@@ -14,6 +14,16 @@ function isEmail(value: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 }
 
+/** Escape user input before interpolating into the notification email HTML. */
+function esc(value: string | undefined) {
+  return (value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
 export async function POST(request: Request) {
   let data: ContactPayload;
   try {
@@ -58,15 +68,15 @@ export async function POST(request: Request) {
           from,
           to,
           reply_to: email,
-          subject: `Novo contacto — ${data.subject || "Website"}`,
+          subject: `Novo contacto — ${(data.subject || "Website").slice(0, 120)}`,
           html: `
             <h2>Novo pedido de contacto</h2>
-            <p><strong>Nome:</strong> ${firstName} ${data.lastName ?? ""}</p>
-            <p><strong>E-mail:</strong> ${email}</p>
-            <p><strong>Telemóvel:</strong> ${data.phone ?? "—"}</p>
-            <p><strong>Assunto:</strong> ${data.subject ?? "—"}</p>
+            <p><strong>Nome:</strong> ${esc(firstName)} ${esc(data.lastName)}</p>
+            <p><strong>E-mail:</strong> ${esc(email)}</p>
+            <p><strong>Telemóvel:</strong> ${esc(data.phone) || "—"}</p>
+            <p><strong>Assunto:</strong> ${esc(data.subject) || "—"}</p>
             <p><strong>Mensagem:</strong></p>
-            <p>${(message ?? "").replace(/\n/g, "<br/>")}</p>
+            <p>${esc(message).replace(/\n/g, "<br/>")}</p>
           `,
         }),
       });
