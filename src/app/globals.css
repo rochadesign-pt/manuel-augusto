@@ -33,7 +33,10 @@
 
   /* Fonts — --font-display is swappable live via the type-tweaks panel */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-bricolage), var(--font-inter), ui-sans-serif, sans-serif;
+  --font-display: var(--font-overused), var(--font-inter), ui-sans-serif, sans-serif;
+  /* Heading defaults (Overused Grotesk, light weight, tight tracking) */
+  --display-weight: 400;
+  --display-tracking: -0.023em;
 
   /* Radii — tightened, balanced (approved level) */
   --radius-lg: 0.5rem;
@@ -79,10 +82,10 @@
 
   h1, h2, h3, h4 {
     font-family: var(--font-display);
-    letter-spacing: var(--display-tracking, -0.025em);
+    letter-spacing: var(--display-tracking, -0.023em);
     line-height: 1.02;
     text-wrap: balance;
-    font-weight: 600;
+    font-weight: var(--display-weight, 400);
   }
 
   :focus-visible {

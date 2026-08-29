@@ -57,6 +57,7 @@ export function Header({ settings }: { settings: SiteSettings }) {
           companyName={settings.companyName}
           shortName={settings.shortName}
           variant={onDark ? "light" : "dark"}
+          priority
         />
 
         <nav className="hidden items-center gap-0.5 lg:flex">

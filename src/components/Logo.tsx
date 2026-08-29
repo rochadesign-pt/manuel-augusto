@@ -1,56 +1,43 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
 
 interface LogoProps {
   companyName: string;
-  shortName: string;
+  /** Kept for API compatibility; the wordmark SVG includes the full name. */
+  shortName?: string;
   variant?: "dark" | "light";
   className?: string;
+  priority?: boolean;
 }
 
 export function Logo({
   companyName,
-  shortName,
   variant = "dark",
   className,
+  priority = false,
 }: LogoProps) {
-  const isLight = variant === "light";
+  const src =
+    variant === "light"
+      ? "/logotipo-manuel-augusto-branco.svg"
+      : "/logotipo-manuel-augusto.svg";
+
   return (
     <Link
       href="/"
       aria-label={companyName}
-      className={cn("group inline-flex items-center gap-2.5", className)}
+      className={cn("group inline-flex items-center", className)}
     >
-      <span className="relative grid size-9 place-items-center rounded-lg bg-brand text-white shadow-sm">
-        <span className="font-display text-sm font-bold leading-none tracking-tight">
-          {shortName}
-        </span>
-        <span
-          aria-hidden
-          className="absolute -right-1 -top-1 grid size-3.5 place-items-center rounded-[3px] bg-ink text-[8px] font-bold text-white"
-        >
-          +
-        </span>
-      </span>
-      <span className="flex flex-col leading-tight">
-        <span
-          className={cn(
-            "font-display text-[15px] font-semibold",
-            isLight ? "text-white" : "text-ink",
-          )}
-        >
-          Manuel Augusto
-        </span>
-        <span
-          className={cn(
-            "text-[11px] font-medium",
-            isLight ? "text-white/60" : "text-muted-2",
-          )}
-        >
-          &amp; Filhos, Lda.
-        </span>
-      </span>
+      <Image
+        src={src}
+        alt={companyName}
+        width={276}
+        height={59}
+        priority={priority}
+        unoptimized
+        className="h-7 w-auto md:h-[30px]"
+      />
     </Link>
   );
 }
