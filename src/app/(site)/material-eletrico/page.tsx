@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "Distribuição de Material Elétrico",
   description:
     "Componentes elétricos certificados para instalações domésticas, comerciais e industriais — com aconselhamento técnico especializado.",
+  alternates: { canonical: "/material-eletrico" },
 };
 
 export default function MaterialEletricoPage() {

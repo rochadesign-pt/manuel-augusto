@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   title: "Assistência Técnica",
   description:
     "Serviço especializado de manutenção e reparação de eletrodomésticos e equipamentos elétricos em Ílhavo. Diagnóstico honesto, resolução rápida.",
+  alternates: { canonical: "/apoio-tecnico" },
 };
 
 export default function ApoioTecnicoPage() {

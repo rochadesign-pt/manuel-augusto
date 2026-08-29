@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   title: "Eletrodomésticos",
   description:
     "Grandes e pequenos eletrodomésticos das melhores marcas, com aconselhamento honesto, entrega, montagem e garantia.",
+  alternates: { canonical: "/eletrodomesticos" },
 };
 
 export default async function EletrodomesticosPage() {

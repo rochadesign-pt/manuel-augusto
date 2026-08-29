@@ -20,7 +20,19 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { slug } = await params;
   const post = await getPost(slug);
   if (!post) return { title: "Notícia" };
-  return { title: post.title, description: post.excerpt };
+  const canonical = `/noticias/${slug}`;
+  return {
+    title: post.title,
+    description: post.excerpt,
+    alternates: { canonical },
+    openGraph: {
+      type: "article",
+      title: post.title,
+      description: post.excerpt,
+      url: canonical,
+      ...(post.publishedAt ? { publishedTime: post.publishedAt } : {}),
+    },
+  };
 }
 
 const components: PortableTextComponents = {

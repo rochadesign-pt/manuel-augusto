@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   title: "Contactos",
   description:
     "Fale connosco. Estamos disponíveis para ajudar com dúvidas, orçamentos e assistência técnica em Ílhavo.",
+  alternates: { canonical: "/contactos" },
 };
 
 export default async function ContactosPage() {

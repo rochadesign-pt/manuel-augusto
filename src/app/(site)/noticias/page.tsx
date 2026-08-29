@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "Notícias",
   description:
     "Novidades, conselhos e histórias da Manuel Augusto & Filhos, Lda.",
+  alternates: { canonical: "/noticias" },
 };
 
 export default async function NoticiasPage() {

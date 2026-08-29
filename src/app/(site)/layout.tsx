@@ -1,6 +1,7 @@
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { SmoothScroll } from "@/components/SmoothScroll";
+import { StructuredData } from "@/components/StructuredData";
 import { ScrollProgress } from "@/components/motion/ScrollProgress";
 import { TypeTweaks } from "@/components/motion/TypeTweaks";
 import { getSiteSettings } from "@/lib/data";
@@ -14,6 +15,7 @@ export default async function SiteLayout({
 
   return (
     <>
+      <StructuredData settings={settings} />
       <SmoothScroll />
       <ScrollProgress />
       <Header settings={settings} />

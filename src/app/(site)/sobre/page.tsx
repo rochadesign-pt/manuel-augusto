@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: "Sobre nós",
   description:
     "A Manuel Augusto & Filhos nasceu em Ílhavo nos anos 60. Mais de seis décadas a resolver problemas e a facilitar a vida das pessoas.",
+  alternates: { canonical: "/sobre" },
 };
 
 export default function SobrePage() {

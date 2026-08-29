@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: "Serviços",
   description:
     "Da venda à assistência: aconselhamento, eletrodomésticos, material elétrico e assistência técnica especializada.",
+  alternates: { canonical: "/servicos" },
 };
 
 export default function ServicosPage() {
