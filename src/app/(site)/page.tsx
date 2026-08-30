@@ -106,7 +106,7 @@ function ComfortBand() {
 
       <div className="container-page relative flex min-h-[86vh] flex-col justify-between py-28 text-white md:py-32">
         <Reveal className="max-w-xl">
-          <p className="text-sm font-medium text-white/70">Tagline</p>
+          <p className="text-sm font-medium text-white/70">Entrega &amp; Garantia</p>
           <h2 className="mt-3 font-display text-4xl font-semibold md:text-[3rem] md:leading-[1.05]">
             Melhore o conforto do seu dia a dia.
           </h2>
