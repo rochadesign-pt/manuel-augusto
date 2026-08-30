@@ -45,6 +45,7 @@ export function StatsShowcase({ stats }: { stats: Stat[] }) {
 
           <div className="flex flex-col gap-4">
             <Media
+              src="/images/manuel-augusto-bento-image1.webp"
               alt="Técnico da Manuel Augusto a reparar uma máquina de lavar loiça"
               tone="steel"
               className="hidden min-h-[150px] flex-1 sm:block"
@@ -87,6 +88,7 @@ function AssistanceCard({ className }: { className?: string }) {
       className={cn("group relative overflow-hidden rounded-2xl", className)}
     >
       <Media
+        src="/images/manuel-augusto-bento-image2.webp"
         alt="Equipa da Manuel Augusto a entregar e instalar um frigorífico"
         tone="navy"
         rounded={false}

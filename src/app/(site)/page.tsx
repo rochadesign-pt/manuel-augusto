@@ -40,7 +40,8 @@ function HomeHero() {
       <div className="absolute inset-0">
         <Parallax className="absolute inset-0" amount={6}>
           <Media
-            alt="Técnicos da Manuel Augusto a instalar eletrodomésticos"
+            src="/images/manuel-augusto-hero-header.webp"
+            alt="Equipa da Manuel Augusto a atender clientes na loja de eletrodomésticos"
             tone="steel"
             priority
             rounded={false}
@@ -91,6 +92,7 @@ function ComfortBand() {
     <section className="relative isolate overflow-hidden">
       <div className="absolute inset-0">
         <Media
+          src="/images/manuel-augusto-melhore-o-conforto.webp"
           alt="Entrega e montagem de um eletrodoméstico pela equipa Manuel Augusto"
           tone="steel"
           rounded={false}
