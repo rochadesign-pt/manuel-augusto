@@ -78,6 +78,7 @@ export function OverlayHero({
             tone={tone}
             rounded={false}
             ring={false}
+            monogram=""
             priority
             className="h-full"
             sizes="100vw"

@@ -118,6 +118,7 @@ function MissionBand() {
               alt="Fachada da loja Manuel Augusto & Filhos, Lda."
               tone="navy"
               rounded={false}
+              monogram=""
               className="h-full"
               sizes="100vw"
             />
