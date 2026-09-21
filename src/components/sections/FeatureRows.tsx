@@ -12,6 +12,7 @@ export interface FeatureRow {
   description: string;
   bullets?: string[];
   image?: SanityImage;
+  src?: string;
   ctas?: { label: string; href: string; variant?: "primary" | "outline" }[];
 }
 
@@ -54,6 +55,7 @@ export function FeatureRows({ heading, rows }: FeatureRowsProps) {
                 <Reveal className={cn(flip && "md:order-2")} y={20}>
                   <Media
                     image={row.image}
+                    src={row.src}
                     alt={row.title}
                     tone={flip ? "soft" : "steel"}
                     zoom

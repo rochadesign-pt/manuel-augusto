@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { ApplianceCategories } from "@/components/sections/ApplianceCategories";
 import { AssistanceRequest } from "@/components/sections/AssistanceRequest";
 import { FeatureRows } from "@/components/sections/FeatureRows";
+import { ImageBand } from "@/components/sections/ImageBand";
 import { OverlayHero } from "@/components/sections/OverlayHero";
 import { PageClosing } from "@/components/sections/PageClosing";
 import { StatementBand } from "@/components/sections/StatementBand";
@@ -23,6 +24,7 @@ export default function ApoioTecnicoPage() {
         title="Apoio técnico para que nunca pare."
         subtitle="Oferecemos serviço especializado de manutenção e reparação para eletrodomésticos e equipamentos elétricos em Ílhavo."
         tone="navy"
+        src="/images/manuel-augusto-hero-assistencia.webp"
       />
 
       <StatementBand
@@ -40,6 +42,7 @@ export default function ApoioTecnicoPage() {
           {
             eyebrow: "Novidades",
             title: "Como conseguimos garantir qualidade",
+            src: "/images/manuel-augusto-assistencia-1.webp",
             description:
               "Um frigorífico, uma máquina de lavar ou um fogão são equipamentos que usamos todos os dias durante anos. Sabemos quais as marcas que cumprem o que prometem e quais os modelos que resistem ao uso real.",
             bullets: [
@@ -55,6 +58,7 @@ export default function ApoioTecnicoPage() {
           {
             eyebrow: "Novidades",
             title: "Sabemos que uma avaria não tem hora marcada.",
+            src: "/images/manuel-augusto-assistencia-3.webp",
             description:
               "Não precisa de saber se é o termostato, o motor ou a resistência. Diz-nos o que o equipamento está a fazer (ou a deixar de fazer) e a partir daí orientamos o passo seguinte.",
             bullets: [
@@ -70,6 +74,7 @@ export default function ApoioTecnicoPage() {
           {
             eyebrow: "Contacto inicial",
             title: "Como funciona o nosso serviço de apoio técnico",
+            src: "/images/manuel-augusto-assistencia-2.webp",
             description:
               "O primeiro contacto é a solução final, estamos consigo num processo simples e transparente. Você entra em contacto connosco pelo telefone ou website para relatar o problema técnico e nós tratamos do resto.",
             ctas: [
@@ -82,8 +87,15 @@ export default function ApoioTecnicoPage() {
       <AssistanceRequest />
 
       <Tagline
+        eyebrow="Experiência"
         title="Décadas de experiência a resolver o que avaria"
         body="Com mais de 60 anos de trabalho técnico, sabemos que cada equipamento é diferente e que a solução certa raramente é a mais óbvia. É por isso que começamos sempre por ouvir e perceber antes de agir."
+      />
+
+      <ImageBand
+        alt="Reparação de um eletrodoméstico pela equipa técnica da Manuel Augusto"
+        src="/images/manuel-augusto-assistencia-4.webp"
+        tone="navy"
       />
 
       <PageClosing />

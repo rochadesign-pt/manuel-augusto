@@ -10,6 +10,7 @@ export interface StickyItem {
   title: string;
   description: string;
   image?: SanityImage;
+  src?: string;
 }
 
 interface StickyFeaturesProps {
@@ -76,6 +77,7 @@ export function StickyFeatures({
             >
               <Media
                 image={item.image}
+                src={item.src}
                 alt={item.title}
                 tone={i % 2 === 0 ? "steel" : "soft"}
                 zoom

@@ -3,9 +3,11 @@ import { Media } from "@/components/ui/Media";
 
 export function ImageBand({
   alt,
+  src,
   tone = "steel",
 }: {
   alt: string;
+  src?: string;
   tone?: "steel" | "soft" | "navy";
 }) {
   return (
@@ -14,6 +16,7 @@ export function ImageBand({
         <Reveal>
           <Media
             alt={alt}
+            src={src}
             tone={tone}
             className="h-64 w-full md:h-96"
             sizes="100vw"

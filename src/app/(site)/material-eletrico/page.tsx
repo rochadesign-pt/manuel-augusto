@@ -21,6 +21,7 @@ export default function MaterialEletricoPage() {
         title="Distribuição de material elétrico"
         subtitle="Fornecemos soluções completas de material elétrico para profissionais e empresas, com qualidade e eficiência em cada entrega."
         tone="navy"
+        src="/images/manuel-augusto-hero-material-eletrico.webp"
       />
 
       <StatementBand
@@ -34,6 +35,7 @@ export default function MaterialEletricoPage() {
           {
             eyebrow: "Novidades",
             title: "O componente certo está aqui.",
+            src: "/images/manuel-augusto-material-eletrico-1.webp",
             description:
               "Uma seleção alargada de componentes elétricos certificados para instalações domésticas, comerciais e industriais. Do cabo à tomada, do disjuntor ao quadro, tudo com as especificações certas para cada aplicação.",
             bullets: [
@@ -49,6 +51,7 @@ export default function MaterialEletricoPage() {
           {
             eyebrow: "Novidades",
             title: "Não saber o que precisa não é problema.",
+            src: "/images/manuel-augusto-material-eletrico-2.webp",
             description:
               "Com décadas de experiência em instalações elétricas, a nossa equipa orienta na escolha certa — seja para uma pequena reparação doméstica ou um projeto de maior escala. Diga-nos o que pretende e nós tratamos do resto.",
             bullets: [
@@ -65,11 +68,16 @@ export default function MaterialEletricoPage() {
       />
 
       <Tagline
+        eyebrow="Qualidade"
         title="Componentes de qualidade. Conhecimento de décadas."
         body="Conhecimento é material com que se trabalha e sabemos o que isso pode afetar numa instalação. Só quem temos em loja passou pelo critério de quem percebe do assunto há mais de 60 anos."
       />
 
-      <ImageBand alt="Técnicos a analisar componentes elétricos" tone="steel" />
+      <ImageBand
+        alt="Técnico a aconselhar sobre componentes elétricos ao balcão"
+        src="/images/manuel-augusto-material-eletrico-3.webp"
+        tone="steel"
+      />
 
       <PageClosing />
     </>

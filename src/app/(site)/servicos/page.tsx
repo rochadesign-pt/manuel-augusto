@@ -45,7 +45,8 @@ export default function ServicosPage() {
 
           <Reveal delay={0.1}>
             <Media
-              alt="Entrega e montagem de um frigorífico"
+              src="/images/manuel-augusto-hero-servicos.webp"
+              alt="Equipa da Manuel Augusto a entregar um frigorífico"
               tone="steel"
               zoom
               className="aspect-[4/3] w-full"
@@ -72,16 +73,19 @@ export default function ServicosPage() {
         items={[
           {
             title: "Equipamentos que fazem a diferença no seu dia a dia",
+            src: "/images/manuel-augusto-servicos-1.webp",
             description:
               "Oferecemos uma seleção criteriosa de eletrodomésticos das marcas mais fiáveis. O nosso objetivo é proporcionar conforto e praticidade para a sua casa. Se não souber o melhor, estamos cá para ajudar.",
           },
           {
             title: "Material elétrico para profissionais e empresas",
+            src: "/images/manuel-augusto-material-eletrico-1.webp",
             description:
               "Produtos da alta qualidade para projetos elétricos. A nossa equipa aconselha os melhores produtos elétricos para os seus projetos, profissionais ou particulares.",
           },
           {
             title: "Manutenção e assistência especializada",
+            src: "/images/manuel-augusto-assistencia-2.webp",
             description:
               "A nossa equipa garante o funcionamento perfeito. Realizamos uma análise completa do equipamento para identificar a causa do problema.",
           },

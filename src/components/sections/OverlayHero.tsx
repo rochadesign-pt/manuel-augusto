@@ -16,6 +16,7 @@ interface OverlayHeroProps {
   title: string;
   subtitle: string;
   tone?: "steel" | "navy";
+  src?: string;
   primaryLabel?: string;
   primaryHref?: string;
 }
@@ -29,6 +30,7 @@ export function OverlayHero({
   title,
   subtitle,
   tone = "steel",
+  src,
   primaryLabel = "Explorar",
   primaryHref = "/contactos",
 }: OverlayHeroProps) {
@@ -76,6 +78,7 @@ export function OverlayHero({
           <Media
             alt={title}
             tone={tone}
+            src={src}
             rounded={false}
             ring={false}
             monogram=""
