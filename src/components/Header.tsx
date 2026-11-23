@@ -98,6 +98,18 @@ export function Header({ settings }: { settings: SiteSettings }) {
         </nav>
 
         <div className="flex items-center gap-2">
+          <a
+            href={`tel:${settings.phone.replace(/\s/g, "")}`}
+            className={cn(
+              "mr-1 hidden items-center gap-2 rounded-lg px-3 py-2 text-[13px] font-semibold transition-colors lg:inline-flex",
+              onDark
+                ? "text-white/90 hover:text-white"
+                : "text-ink hover:text-brand",
+            )}
+          >
+            <PhoneIcon />
+            {settings.phone}
+          </a>
           {!open &&
             (onDark ? (
               <Button
@@ -187,8 +199,20 @@ export function Header({ settings }: { settings: SiteSettings }) {
   );
 }
 
-function Burger({ open }: { open: boolean }) {
+function PhoneIcon() {
   return (
+    <svg viewBox="0 0 16 16" className="size-4" fill="none" aria-hidden>
+      <path
+        d="M5.2 2.5 6.5 5l-1.3 1.3a8 8 0 0 0 3.5 3.5L10 8.5l2.5 1.3c.4.2.6.6.5 1l-.4 1.6a1 1 0 0 1-1 .8C6.6 13 3 9.4 2.8 4.4a1 1 0 0 1 .8-1l1.6-.4c.4-.1.8.1 1 .5Z"
+        stroke="currentColor"
+        strokeWidth="1.3"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function Burger({ open }: { open: boolean }) {  return (
     <div className="relative h-4 w-5">
       <motion.span
         className="absolute left-0 block h-0.5 w-5 rounded-full bg-current"

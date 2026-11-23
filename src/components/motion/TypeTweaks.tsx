@@ -56,7 +56,7 @@ function ensureWeightStyle() {
  * face is stored locally, so it previews only for the person tuning it.
  */
 export function TypeTweaks() {
-  const [enabled, setEnabled] = useState(true);
+  const [enabled, setEnabled] = useState(false);
   const [open, setOpen] = useState(false);
   const [font, setFont] = useState("jakarta");
   const [track, setTrack] = useState(-25);
@@ -83,17 +83,22 @@ export function TypeTweaks() {
       applyWeight(w);
     }
 
-    // Visible by default; only hidden if the user chose to hide it.
+    // Hidden from visitors by default — revealed with ?tweaks in the URL
+    // (remembered after) or Shift+T. A design tool, not site furniture.
     const params = new URLSearchParams(window.location.search);
-    if (params.has("tweaks")) localStorage.removeItem(FLAG_KEY);
-    if (localStorage.getItem(FLAG_KEY) === "hidden") setEnabled(false);
+    if (params.has("tweaks")) {
+      localStorage.setItem(FLAG_KEY, "shown");
+      setEnabled(true);
+    } else if (localStorage.getItem(FLAG_KEY) === "shown") {
+      setEnabled(true);
+    }
 
     const onKey = (e: KeyboardEvent) => {
       if (e.shiftKey && (e.key === "T" || e.key === "t")) {
         setEnabled((v) => {
           const next = !v;
-          if (next) localStorage.removeItem(FLAG_KEY);
-          else localStorage.setItem(FLAG_KEY, "hidden");
+          if (next) localStorage.setItem(FLAG_KEY, "shown");
+          else localStorage.removeItem(FLAG_KEY);
           return next;
         });
         setOpen(true);
@@ -104,7 +109,7 @@ export function TypeTweaks() {
   }, []);
 
   function hidePanel() {
-    localStorage.setItem(FLAG_KEY, "hidden");
+    localStorage.removeItem(FLAG_KEY);
     setEnabled(false);
   }
 
