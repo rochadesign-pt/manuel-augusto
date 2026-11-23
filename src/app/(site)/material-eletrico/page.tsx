@@ -33,7 +33,7 @@ export default function MaterialEletricoPage() {
       <FeatureRows
         rows={[
           {
-            eyebrow: "Novidades",
+            eyebrow: "Material elétrico",
             title: "O componente certo está aqui.",
             src: "/images/manuel-augusto-material-eletrico-1.webp",
             description:
@@ -44,12 +44,11 @@ export default function MaterialEletricoPage() {
               "Tomadas, fichas e material de instalação",
             ],
             ctas: [
-              { label: "Ver mais", href: "/contactos", variant: "primary" },
-              { label: "Detalhes", href: "/contactos", variant: "outline" },
+              { label: "Pedir aconselhamento", href: "/contactos", variant: "primary" },
             ],
           },
           {
-            eyebrow: "Novidades",
+            eyebrow: "Aconselhamento",
             title: "Não saber o que precisa não é problema.",
             src: "/images/manuel-augusto-material-eletrico-2.webp",
             description:
@@ -60,8 +59,7 @@ export default function MaterialEletricoPage() {
               "Apoio tanto para particulares como profissionais",
             ],
             ctas: [
-              { label: "Ver mais", href: "/contactos", variant: "primary" },
-              { label: "Detalhes", href: "/contactos", variant: "outline" },
+              { label: "Pedir aconselhamento", href: "/contactos", variant: "primary" },
             ],
           },
         ]}

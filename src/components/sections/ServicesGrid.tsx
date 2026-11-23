@@ -42,6 +42,7 @@ export function ServicesGrid({ services }: { services: Service[] }) {
         <motion.ul
           variants={staggerContainer}
           initial={reduce ? false : "hidden"}
+          animate={reduce ? "show" : undefined}
           whileInView={reduce ? undefined : "show"}
           viewport={{ once: true, margin: "-10%" }}
           className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4 md:mt-20"

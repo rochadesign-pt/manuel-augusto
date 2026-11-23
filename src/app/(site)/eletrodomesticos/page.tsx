@@ -36,7 +36,7 @@ export default async function EletrodomesticosPage() {
       <FeatureRows
         rows={[
           {
-            eyebrow: "Novidades",
+            eyebrow: "Grandes eletrodomésticos",
             title: "Uma escolha que fica anos lá em casa.",
             src: "/images/manuel-augusto-eletrodomesticos-1.webp",
             description:
@@ -47,12 +47,11 @@ export default async function EletrodomesticosPage() {
               "Fogões modernos e seguros",
             ],
             ctas: [
-              { label: "Ver mais", href: "/contactos", variant: "primary" },
-              { label: "Detalhes", href: "/contactos", variant: "outline" },
+              { label: "Pedir aconselhamento", href: "/contactos", variant: "primary" },
             ],
           },
           {
-            eyebrow: "Novidades",
+            eyebrow: "Pequenos eletrodomésticos",
             title: "Para o dia a dia, os detalhes importam.",
             src: "/images/manuel-augusto-eletrodomesticos-2.webp",
             description:
@@ -63,8 +62,7 @@ export default async function EletrodomesticosPage() {
               "Conforto e eficiência no dia a dia",
             ],
             ctas: [
-              { label: "Ver mais", href: "/contactos", variant: "primary" },
-              { label: "Detalhes", href: "/contactos", variant: "outline" },
+              { label: "Pedir aconselhamento", href: "/contactos", variant: "primary" },
             ],
           },
         ]}

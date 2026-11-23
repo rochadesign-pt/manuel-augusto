@@ -26,9 +26,19 @@ export function Reveal({
   const reduce = useReducedMotion();
   const MotionTag = motion[as];
 
-  // With reduced motion, render content immediately visible (no reveal).
+  // With reduced motion, show content immediately. The server can't know the
+  // preference, so its HTML ships the hidden initial state — actively animate
+  // to the visible state (instantly, initial={false}) or it stays at opacity 0.
   if (reduce) {
-    return <MotionTag className={className}>{children}</MotionTag>;
+    return (
+      <MotionTag
+        className={className}
+        initial={false}
+        animate={{ opacity: 1, y: 0 }}
+      >
+        {children}
+      </MotionTag>
+    );
   }
 
   // Above-the-fold content animates on mount so it can never get stuck

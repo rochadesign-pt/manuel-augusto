@@ -36,8 +36,8 @@ export default function ServicosPage() {
                 <Button href="/contactos" variant="primary" magnetic>
                   Fala connosco
                 </Button>
-                <Button href="/eletrodomesticos" variant="outline" arrow>
-                  Ver produtos
+                <Button href="/sobre" variant="outline" arrow>
+                  Conhecer a empresa
                 </Button>
               </div>
             </Reveal>
@@ -67,8 +67,8 @@ export default function ServicosPage() {
         title="O seu conforto é o nosso objetivo."
         intro="Seja um novo eletrodoméstico, uma peça elétrica ou até uma reparação, estamos cá para ajudar."
         ctas={[
-          { label: "Começar", href: "/contactos", variant: "primary" },
-          { label: "Detalhes", href: "/eletrodomesticos", variant: "outline" },
+          { label: "Falar connosco", href: "/contactos", variant: "primary" },
+          { label: "Conhecer a empresa", href: "/sobre", variant: "outline" },
         ]}
         items={[
           {
@@ -81,7 +81,7 @@ export default function ServicosPage() {
             title: "Material elétrico para profissionais e empresas",
             src: "/images/manuel-augusto-material-eletrico-1.webp",
             description:
-              "Produtos da alta qualidade para projetos elétricos. A nossa equipa aconselha os melhores produtos elétricos para os seus projetos, profissionais ou particulares.",
+              "Material de qualidade para instalações elétricas. A nossa equipa aconselha a solução certa para cada projeto, profissional ou particular.",
           },
           {
             title: "Manutenção e assistência especializada",

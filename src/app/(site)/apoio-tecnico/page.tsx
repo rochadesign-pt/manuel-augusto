@@ -40,7 +40,7 @@ export default function ApoioTecnicoPage() {
       <FeatureRows
         rows={[
           {
-            eyebrow: "Novidades",
+            eyebrow: "Qualidade",
             title: "Como conseguimos garantir qualidade",
             src: "/images/manuel-augusto-assistencia-1.webp",
             description:
@@ -51,12 +51,11 @@ export default function ApoioTecnicoPage() {
               "Experiência técnica especializada",
             ],
             ctas: [
-              { label: "Ver mais", href: "/contactos", variant: "primary" },
-              { label: "Detalhes", href: "/contactos", variant: "outline" },
+              { label: "Pedir assistência", href: "/contactos", variant: "primary" },
             ],
           },
           {
-            eyebrow: "Novidades",
+            eyebrow: "Disponibilidade",
             title: "Sabemos que uma avaria não tem hora marcada.",
             src: "/images/manuel-augusto-assistencia-3.webp",
             description:
@@ -67,8 +66,7 @@ export default function ApoioTecnicoPage() {
               "Processo simples e transparente",
             ],
             ctas: [
-              { label: "Ver mais", href: "/contactos", variant: "primary" },
-              { label: "Detalhes", href: "/contactos", variant: "outline" },
+              { label: "Pedir assistência", href: "/contactos", variant: "primary" },
             ],
           },
           {

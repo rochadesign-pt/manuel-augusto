@@ -61,7 +61,10 @@ export default async function ContactosPage() {
 
       <FaqSection items={faqs} />
 
-      <CtaBanner />
+      <CtaBanner
+        title="Prefere ligar? Atendemos com gosto."
+        text="Se for mais simples falar ao telefone ou passar pela loja, estamos cá — de segunda a sábado, aqui em Ílhavo."
+      />
     </>
   );
 }

@@ -31,7 +31,7 @@ export function OverlayHero({
   subtitle,
   tone = "steel",
   src,
-  primaryLabel = "Explorar",
+  primaryLabel = "Falar connosco",
   primaryHref = "/contactos",
 }: OverlayHeroProps) {
   const section = useRef<HTMLElement>(null);
@@ -103,12 +103,12 @@ export function OverlayHero({
                 {primaryLabel}
               </Button>
               <Button
-                href="/contactos"
+                href="/sobre"
                 variant="ghost"
-                arrowUp
+                arrow
                 className="border border-white/40 text-white hover:bg-white/10"
               >
-                Contacto
+                Conhecer a empresa
               </Button>
             </div>
           </Reveal>

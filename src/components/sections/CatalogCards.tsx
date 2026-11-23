@@ -12,6 +12,7 @@ export function CatalogCards({ catalogs }: { catalogs: Catalog[] }) {
       <motion.div
         variants={staggerContainer}
         initial={reduce ? false : "hidden"}
+        animate={reduce ? "show" : undefined}
         whileInView={reduce ? undefined : "show"}
         viewport={{ once: true, margin: "-10%" }}
         className="container-page grid gap-5 md:grid-cols-3"
