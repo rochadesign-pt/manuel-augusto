@@ -31,12 +31,13 @@
   /* Accent (warm, used sparingly for awwwards contrast) */
   --color-accent: #f2c14e;
 
-  /* Fonts — --font-display is swappable live via the type-tweaks panel */
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-overused), var(--font-inter), ui-sans-serif, sans-serif;
-  /* Heading defaults (Overused Grotesk, light weight, tight tracking) */
-  --display-weight: 400;
-  --display-tracking: -0.023em;
+  /* Fonts — Plus Jakarta Sans system. --font-display is swappable live via
+     the type-tweaks panel. */
+  --font-sans: var(--font-jakarta), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-jakarta), var(--font-inter), ui-sans-serif, sans-serif;
+  /* Heading defaults (Plus Jakarta Sans, confident weight, tight tracking) */
+  --display-weight: 600;
+  --display-tracking: -0.025em;
 
   /* Radii — tightened, balanced (approved level) */
   --radius-lg: 0.5rem;

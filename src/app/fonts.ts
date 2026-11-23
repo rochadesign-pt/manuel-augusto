@@ -6,6 +6,7 @@ import {
   Inter,
   Karla,
   Onest,
+  Plus_Jakarta_Sans,
   Schibsted_Grotesk,
   Sora,
   Space_Grotesk,
@@ -16,6 +17,14 @@ export const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inter",
+});
+
+// Primary typeface — Plus Jakarta Sans (headings + body), preloaded.
+export const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-jakarta",
 });
 
 // Default display face (preloaded).

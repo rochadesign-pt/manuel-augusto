@@ -8,6 +8,7 @@ import {
   figtree,
   hanken,
   inter,
+  jakarta,
   karla,
   onest,
   overused,
@@ -98,6 +99,7 @@ export default function RootLayout({
       lang="pt"
       className={[
         inter.variable,
+        jakarta.variable,
         display.variable,
         spaceGrotesk.variable,
         sora.variable,

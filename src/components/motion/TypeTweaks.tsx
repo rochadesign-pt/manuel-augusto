@@ -4,7 +4,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const FONTS = [
-  { id: "overused", label: "Overused Grotesk", tag: "atual", var: "--font-overused" },
+  { id: "jakarta", label: "Plus Jakarta", tag: "atual", var: "--font-jakarta" },
+  { id: "overused", label: "Overused Grotesk", tag: "grotesca", var: "--font-overused" },
   { id: "sora", label: "Sora", tag: "logótipo", var: "--font-sora" },
   { id: "bricolage", label: "Bricolage", tag: "grotesca", var: "--font-bricolage" },
   { id: "inter", label: "Inter", tag: "neutra", var: "--font-inter" },
@@ -19,10 +20,10 @@ const FONTS = [
 
 const WEIGHTS = [400, 500, 600, 700, 800] as const;
 
-// Bumped to -v2 so previously-saved previews reset to the new Overused default.
-const FONT_KEY = "ma-type-font-v2";
-const TRACK_KEY = "ma-type-track-v2";
-const WEIGHT_KEY = "ma-type-weight-v2";
+// Bumped to -v3 so previously-saved previews reset to the new Jakarta default.
+const FONT_KEY = "ma-type-font-v3";
+const TRACK_KEY = "ma-type-track-v3";
+const WEIGHT_KEY = "ma-type-weight-v3";
 const FLAG_KEY = "ma-tweaks";
 
 function applyFont(id: string) {
@@ -45,7 +46,7 @@ function ensureWeightStyle() {
   const el = document.createElement("style");
   el.id = "ma-type-weight-style";
   el.textContent =
-    "h1,h2,h3,h4{font-weight:var(--display-weight,400)!important}";
+    "h1,h2,h3,h4{font-weight:var(--display-weight,600)!important}";
   document.head.appendChild(el);
 }
 
@@ -57,9 +58,9 @@ function ensureWeightStyle() {
 export function TypeTweaks() {
   const [enabled, setEnabled] = useState(true);
   const [open, setOpen] = useState(false);
-  const [font, setFont] = useState("overused");
-  const [track, setTrack] = useState(-23);
-  const [weight, setWeight] = useState(400);
+  const [font, setFont] = useState("jakarta");
+  const [track, setTrack] = useState(-25);
+  const [weight, setWeight] = useState(600);
 
   // Apply saved preferences on every load (even with the panel hidden).
   useEffect(() => {
@@ -123,9 +124,9 @@ export function TypeTweaks() {
     localStorage.setItem(WEIGHT_KEY, String(v));
   }
   function reset() {
-    chooseFont("overused");
-    changeTrack(-23);
-    changeWeight(400);
+    chooseFont("jakarta");
+    changeTrack(-25);
+    changeWeight(600);
   }
 
   if (!enabled) return null;
