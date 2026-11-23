@@ -21,9 +21,9 @@ const FONTS = [
 const WEIGHTS = [400, 500, 600, 700, 800] as const;
 
 // Bumped to -v3 so previously-saved previews reset to the new Jakarta default.
-const FONT_KEY = "ma-type-font-v3";
-const TRACK_KEY = "ma-type-track-v3";
-const WEIGHT_KEY = "ma-type-weight-v3";
+const FONT_KEY = "ma-type-font-v4";
+const TRACK_KEY = "ma-type-track-v4";
+const WEIGHT_KEY = "ma-type-weight-v4";
 const FLAG_KEY = "ma-tweaks";
 
 function applyFont(id: string) {
@@ -59,7 +59,7 @@ export function TypeTweaks() {
   const [enabled, setEnabled] = useState(false);
   const [open, setOpen] = useState(false);
   const [font, setFont] = useState("jakarta");
-  const [track, setTrack] = useState(-25);
+  const [track, setTrack] = useState(-10);
   const [weight, setWeight] = useState(600);
 
   // Apply saved preferences on every load (even with the panel hidden).
@@ -130,7 +130,7 @@ export function TypeTweaks() {
   }
   function reset() {
     chooseFont("jakarta");
-    changeTrack(-25);
+    changeTrack(-10);
     changeWeight(600);
   }
 

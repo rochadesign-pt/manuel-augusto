@@ -84,24 +84,6 @@ export function Media({
           role="img"
           aria-label={alt}
         >
-          {/* soft light */}
-          <div
-            className="absolute inset-0 opacity-[0.10] mix-blend-overlay"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 22% 18%, #fff 0, transparent 45%), radial-gradient(circle at 82% 78%, #fff 0, transparent 42%)",
-            }}
-          />
-          {/* fine dot grid for texture */}
-          <div
-            className="absolute inset-0 opacity-[0.14]"
-            style={{
-              backgroundImage:
-                "radial-gradient(currentColor 1px, transparent 1px)",
-              backgroundSize: "20px 20px",
-              color: t.fg,
-            }}
-          />
           {monogram ? (
             <div className="absolute inset-0 grid place-items-center">
               <div className="flex items-center gap-2 rounded-xl bg-white/10 px-2.5 py-2 ring-1 ring-white/20 backdrop-blur-[2px]">

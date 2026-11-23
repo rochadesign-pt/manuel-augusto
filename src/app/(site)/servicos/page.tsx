@@ -18,19 +18,20 @@ export const metadata: Metadata = {
 export default function ServicosPage() {
   return (
     <>
-      <section className="pt-28 md:pt-32">
+      <section className="pb-20 pt-28 md:pb-28 md:pt-32">
         <div className="container-page grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <div>
             <SplitReveal
               as="h1"
               trigger="load"
               text="Da venda à assistência, ajudar é o que nos move."
-              className="text-4xl font-semibold leading-[1.05] md:text-[3.25rem]"
+              className="text-4xl font-semibold leading-[1.12] md:text-[3.25rem]"
             />
             <Reveal load delay={0.25}>
               <p className="mt-5 max-w-md text-muted">
-                Dúvidas, informações, damos conta de tudo. A nossa equipa está
-                sempre disponível para o assistir e acompanhar.
+                Vendemos, entregamos, instalamos e reparamos. Se tiver uma
+                dúvida, pergunte: na loja ou por telefone, respondemos sem
+                compromisso.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Button href="/contactos" variant="primary" magnetic>
@@ -53,10 +54,14 @@ export default function ServicosPage() {
               sizes="(max-width: 1024px) 100vw, 50vw"
               priority
             />
-            <p className="mt-3 text-sm text-muted">
-              Marcas de qualidade para a sua casa — seleção cuidadosa dos
-              melhores eletrodomésticos do mercado.
-            </p>
+            <div className="mt-4">
+              <p className="text-sm font-semibold text-ink">
+                Marcas de qualidade para a sua casa
+              </p>
+              <p className="mt-1 text-sm text-muted">
+                Escolhidas por quem as instala e as repara todos os dias.
+              </p>
+            </div>
           </Reveal>
         </div>
       </section>

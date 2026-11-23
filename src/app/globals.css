@@ -37,7 +37,7 @@
   --font-display: var(--font-jakarta), var(--font-inter), ui-sans-serif, sans-serif;
   /* Heading defaults (Plus Jakarta Sans, confident weight, tight tracking) */
   --display-weight: 600;
-  --display-tracking: -0.025em;
+  --display-tracking: -0.01em;
 
   /* Radii — tightened, balanced (approved level) */
   --radius-lg: 0.5rem;
@@ -83,8 +83,8 @@
 
   h1, h2, h3, h4 {
     font-family: var(--font-display);
-    letter-spacing: var(--display-tracking, -0.023em);
-    line-height: 1.02;
+    letter-spacing: var(--display-tracking, -0.01em);
+    line-height: 1.12;
     text-wrap: balance;
     font-weight: var(--display-weight, 400);
   }
@@ -110,23 +110,15 @@
     .container-page { padding-inline: 2.5rem; }
   }
 
+  /* Small section label: plain sentence case, brand colour. Deliberately no
+     tracked-out caps or leading rule — reads human, not template. */
   .eyebrow {
     display: inline-flex;
     align-items: center;
-    gap: 0.6em;
     font-family: var(--font-sans);
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--color-muted);
-  }
-  .eyebrow::before {
-    content: "";
-    width: 1.6rem;
-    height: 1px;
-    background: currentColor;
-    opacity: 0.5;
+    color: var(--color-brand);
   }
   .eyebrow-center { justify-content: center; }
 }

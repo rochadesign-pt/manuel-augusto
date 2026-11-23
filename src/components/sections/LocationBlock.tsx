@@ -56,7 +56,7 @@ export function LocationBlock({ settings }: { settings: SiteSettings }) {
                       <LocIcon name={item.icon} />
                     </span>
                     <div className="min-w-0">
-                      <p className="text-xs font-medium uppercase tracking-wide text-muted-2">
+                      <p className="text-sm text-muted">
                         {item.label}
                       </p>
                       <p className="text-sm font-medium text-ink">{item.value}</p>

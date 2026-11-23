@@ -7,7 +7,7 @@ export function WordmarkBand({ word = "Manuel Augusto" }: { word?: string }) {
       <div className="container-page">
         <Reveal className="relative overflow-hidden rounded-3xl bg-navy">
           <div className="flex items-center justify-center pt-10 md:pt-12">
-            <span className="font-display text-4xl font-bold tracking-tight text-white md:text-6xl">
+            <span className="font-display text-4xl font-bold text-white md:text-6xl">
               {word}
             </span>
           </div>

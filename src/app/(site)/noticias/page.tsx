@@ -22,7 +22,7 @@ export default async function NoticiasPage() {
         <div className="container-page">
           <Reveal className="max-w-2xl">
             <p className="eyebrow">Notícias</p>
-            <h1 className="mt-3 text-4xl font-semibold leading-[1.05] md:text-[3rem]">
+            <h1 className="mt-3 text-4xl font-semibold leading-[1.12] md:text-[3rem]">
               Novidades e conselhos de quem percebe do assunto.
             </h1>
             <p className="mt-5 text-muted">

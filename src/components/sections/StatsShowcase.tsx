@@ -71,7 +71,7 @@ function StatCard({ stat, className }: { stat: Stat; className?: string }) {
         className,
       )}
     >
-      <span className="font-display text-[2.75rem] font-normal leading-none tracking-[-0.02em] text-ink md:text-6xl">
+      <span className="font-display text-[2.75rem] font-normal leading-none text-ink md:text-6xl">
         <CountUp value={stat.value} />
       </span>
       <span className="mt-3 text-sm font-medium text-ink-soft">
@@ -98,7 +98,7 @@ function AssistanceCard({ className }: { className?: string }) {
       />
       <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/80 to-navy/20" />
       <div className="absolute inset-x-0 bottom-0 p-7 text-white md:p-8">
-        <p className="font-display text-lg font-normal leading-snug tracking-[-0.02em]">
+        <p className="font-display text-lg font-normal leading-snug">
           Equipa própria de assistência técnica, aqui em Ílhavo.
         </p>
         <p className="mt-2 text-sm leading-relaxed text-white/75">

@@ -29,19 +29,8 @@ export function CatalogCards({ catalogs }: { catalogs: Catalog[] }) {
             className="group relative flex min-h-[340px] flex-col justify-between overflow-hidden rounded-2xl p-7 text-white ring-1 ring-inset ring-white/10 md:min-h-[380px] md:p-8"
             style={{ backgroundColor: c.color }}
           >
-            {/* dot-grid texture */}
-            <div
-              aria-hidden
-              className="pointer-events-none absolute inset-0 opacity-[0.16]"
-              style={{
-                backgroundImage:
-                  "radial-gradient(#fff 1px, transparent 1px)",
-                backgroundSize: "20px 20px",
-              }}
-            />
-
             <div className="relative">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-white/70">
+              <p className="text-sm font-medium text-white/75">
                 Catálogo
               </p>
               <h3 className="mt-2 font-display text-2xl font-semibold md:text-[1.75rem]">

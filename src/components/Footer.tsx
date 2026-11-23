@@ -126,7 +126,7 @@ function FooterCol({
 }) {
   return (
     <div className="text-sm leading-relaxed">
-      <h3 className="mb-4 font-display text-xs font-semibold uppercase tracking-wider text-white/40">
+      <h3 className="mb-4 text-sm font-semibold text-white">
         {title}
       </h3>
       <div className="space-y-1">{children}</div>

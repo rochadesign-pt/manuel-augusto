@@ -31,7 +31,7 @@ export function BrandsMarquee({ brands }: { brands: Brand[] }) {
                     imgClassName="object-contain"
                   />
                 ) : (
-                  <span className="whitespace-nowrap font-display tracking-tight opacity-70 transition-opacity hover:opacity-100">
+                  <span className="whitespace-nowrap font-display opacity-70 transition-opacity hover:opacity-100">
                     {brand.name}
                   </span>
                 )}

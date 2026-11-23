@@ -59,7 +59,7 @@ function HomeHero() {
             trigger="load"
             stagger={0.05}
             text="Há mais de 60 anos a cuidar da energia e do conforto da sua casa."
-            className="text-4xl font-semibold leading-[1.05] text-white md:text-[3.5rem]"
+            className="text-4xl font-semibold leading-[1.12] text-white md:text-[3.5rem]"
           />
           <Reveal load delay={0.35}>
             <p className="mt-6 max-w-xl text-base text-white/75 md:text-lg">
@@ -107,7 +107,7 @@ function ComfortBand() {
       <div className="container-page relative flex min-h-[86vh] flex-col justify-between py-28 text-white md:py-32">
         <Reveal className="max-w-xl">
           <p className="text-sm font-medium text-white/70">Entrega &amp; Garantia</p>
-          <h2 className="mt-3 font-display text-4xl font-semibold md:text-[3rem] md:leading-[1.05]">
+          <h2 className="mt-3 font-display text-4xl font-semibold md:text-[3rem] md:leading-[1.12]">
             Melhore o conforto do seu dia a dia.
           </h2>
           <p className="mt-6 max-w-lg leading-relaxed text-white/75">

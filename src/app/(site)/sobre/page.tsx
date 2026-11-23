@@ -25,7 +25,7 @@ export default function SobrePage() {
               as="h1"
               trigger="load"
               text="Uma história feita de trabalho, confiança e proximidade."
-              className="text-4xl font-semibold leading-[1.05] md:text-[3.25rem]"
+              className="text-4xl font-semibold leading-[1.12] md:text-[3.25rem]"
             />
             <Reveal load delay={0.25}>
               <p className="mt-5 max-w-xl text-muted">
