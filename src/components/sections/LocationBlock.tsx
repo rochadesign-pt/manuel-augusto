@@ -47,7 +47,7 @@ export function LocationBlock({ settings }: { settings: SiteSettings }) {
           <div className="absolute inset-x-4 bottom-4 md:inset-x-10 md:bottom-10 md:max-w-md">
             <div className="rounded-3xl bg-white/95 p-7 shadow-float backdrop-blur md:p-9">
               <h3 className="font-display text-2xl font-semibold md:text-[1.75rem]">
-                Não hesite em fazer-nos uma visita!
+                Passe pela loja.
               </h3>
               <ul className="mt-6 space-y-4">
                 {items.map((item) => (

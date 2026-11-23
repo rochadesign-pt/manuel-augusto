@@ -71,14 +71,13 @@ export function AssistanceRequest() {
             Conte-nos o problema. Tratamos do resto.
           </h2>
           <p className="mt-5 max-w-md text-muted">
-            Em três passos rápidos, dizemos-lhe o próximo passo — sem
-            compromisso e sem custos de diagnóstico à distância.
+            Responda a três perguntas e entramos em contacto consigo. Não fica com nenhum compromisso.
           </p>
           <ul className="mt-7 space-y-3">
             {[
-              "Resposta no próprio dia útil",
+              "Respondemos o mais depressa possível",
               "Diagnóstico honesto antes de avançar",
-              "Peças de origem e garantia de 3 anos",
+              "Peças de origem sempre que possível",
             ].map((b) => (
               <li key={b} className="flex items-center gap-3 text-sm text-ink-soft">
                 <span className="grid size-6 shrink-0 place-items-center rounded-md bg-brand-soft text-brand">

@@ -58,17 +58,16 @@ function HomeHero() {
             as="h1"
             trigger="load"
             stagger={0.05}
-            text="Há mais de 60 anos a cuidar da energia e do conforto da sua casa."
+            text="A loja de eletrodomésticos de Ílhavo, desde 1960."
             className="text-4xl font-semibold leading-[1.12] text-white md:text-[3.5rem]"
           />
           <Reveal load delay={0.35}>
             <p className="mt-6 max-w-xl text-base text-white/75 md:text-lg">
-              Desde 1960 que ajudamos as famílias de Ílhavo a escolher, manter e
-              reparar os seus eletrodomésticos.
+              Vendemos, entregamos e reparamos eletrodomésticos. Somos uma empresa de família, na Avenida 25 de Abril.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button href="/contactos" variant="light" size="lg" magnetic>
-                Fala connosco
+                Fale connosco
               </Button>
               <Button
                 href="/apoio-tecnico"
@@ -77,7 +76,7 @@ function HomeHero() {
                 arrowUp
                 className="border border-white/30 text-white hover:bg-white/10"
               >
-                Fala com técnico
+                Pedir assistência
               </Button>
             </div>
           </Reveal>
@@ -108,24 +107,22 @@ function ComfortBand() {
         <Reveal className="max-w-xl">
           <p className="text-sm font-medium text-white/70">Entrega &amp; Garantia</p>
           <h2 className="mt-3 font-display text-4xl font-semibold md:text-[3rem] md:leading-[1.12]">
-            Melhore o conforto do seu dia a dia.
+            Comprou? Nós levamos e montamos.
           </h2>
           <p className="mt-6 max-w-lg leading-relaxed text-white/75">
-            Pequenas melhorias fazem grandes diferenças. Um eletrodoméstico mais
-            eficiente, uma instalação mais segura ou uma reparação feita a tempo,
-            tudo contribui para um espaço mais cómodo e funcional.
+            Diga-nos onde quer o eletrodoméstico e tratamos do transporte e da montagem. Depois, se alguma coisa falhar, é connosco que fala.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-2">
             <Button href="/contactos" variant="light">
-              Entrar em contacto
+              Fale connosco
             </Button>
             <Button
-              href="/apoio-tecnico"
+              href="/eletrodomesticos"
               variant="ghost"
               arrow
               className="text-white hover:bg-white/10"
             >
-              Falar
+              Ver eletrodomésticos
             </Button>
           </div>
         </Reveal>
@@ -139,8 +136,7 @@ function ComfortBand() {
               Entrega e montagem
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-white/70">
-              No momento da compra pode comunicar-nos onde deseja que o
-              eletrodoméstico seja entregue. Nós garantimos o transporte!
+              Na altura da compra diga-nos a morada. Levamos o eletrodoméstico a sua casa e deixamo-lo instalado.
             </p>
           </div>
           <div>
@@ -148,9 +144,7 @@ function ComfortBand() {
               Garantia de 3 anos
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-white/70">
-              Após a compra garantimos 3 anos de garantia (para cliente
-              particular) no eletrodoméstico adquirido para que usufrua do mesmo
-              sem problemas!
+              Os eletrodomésticos comprados connosco têm 3 anos de garantia para clientes particulares.
             </p>
           </div>
         </Reveal>

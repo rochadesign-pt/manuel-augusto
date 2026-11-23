@@ -26,8 +26,7 @@ export default async function NoticiasPage() {
               Novidades e conselhos de quem percebe do assunto.
             </h1>
             <p className="mt-5 text-muted">
-              Dicas para escolher, manter e tirar o máximo dos seus
-              equipamentos — escritas pela nossa equipa.
+              Conselhos para escolher e cuidar dos seus equipamentos, escritos pela nossa equipa.
             </p>
           </Reveal>
         </div>
@@ -46,8 +45,7 @@ export default async function NoticiasPage() {
                 Em breve, novidades por aqui.
               </h2>
               <p className="mx-auto mt-2 max-w-sm text-sm text-muted">
-                Ainda não há notícias publicadas. Assim que a equipa publicar no
-                Studio, aparecem automaticamente nesta página.
+                Ainda não publicámos nada. Volte em breve.
               </p>
             </div>
           ) : (

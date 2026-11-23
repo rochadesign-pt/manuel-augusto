@@ -23,14 +23,14 @@ export default async function EletrodomesticosPage() {
     <>
       <OverlayHero
         title="Eletrodomésticos de qualidade para a sua casa"
-        subtitle="Uma seleção, feita com conhecimento, para encontrar o eletrodoméstico que se encaixa no seu espaço, no seu orçamento e no seu dia a dia."
+        subtitle="Ajudamos a escolher o eletrodoméstico certo para o seu espaço e para o seu orçamento. Depois entregamos e montamos."
         src="/images/manuel-augusto-hero-eletrodomesticos-1.webp"
       />
 
       <StatementBand
         lead="Escolher um eletrodoméstico parece simples."
         emphasis="Até perceber que há dezenas de modelos, especificações e preços que ninguém explica."
-        body="Há 60 anos que ajudamos as famílias de Ílhavo a evitar o 'stress' de escolher o melhor ou o mais barato. Não vendemos catálogos, ouvimos o que precisa, percebemos o seu espaço e recomendamos o que faz sentido para si."
+        body="Na loja explicamos as diferenças com calma. Perguntamos quantos são lá em casa, que espaço tem e quanto quer gastar, e recomendamos o que faz sentido. Nem sempre é o mais caro."
       />
 
       <FeatureRows
@@ -38,12 +38,12 @@ export default async function EletrodomesticosPage() {
           {
             eyebrow: "Grandes eletrodomésticos",
             title: "Uma escolha que fica anos lá em casa.",
-            src: "/images/manuel-augusto-eletrodomesticos-1.webp",
+            src: "/images/manuel-augusto-aconselhamento-frigorifico.webp",
             description:
               "Um frigorífico, uma máquina de lavar ou um fogão são equipamentos que usamos todos os dias durante anos. Sabemos quais as marcas que cumprem o que prometem e quais os modelos que resistem ao uso real.",
             bullets: [
-              "Frigoríficos de última geração",
-              "Máquinas de lavar eficientes",
+              "Frigoríficos e combinados",
+              "Máquinas de lavar roupa e loiça",
               "Fogões modernos e seguros",
             ],
             ctas: [
@@ -55,11 +55,11 @@ export default async function EletrodomesticosPage() {
             title: "Para o dia a dia, os detalhes importam.",
             src: "/images/manuel-augusto-eletrodomesticos-2.webp",
             description:
-              "Aspiradores, ferros ou chaleiras: são equipamentos que usa sem pensar. Por isso importa escolhê-los bem. Ajudamos a perceber o que vale a pena e o que não passa de especificações no papel.",
+              "Aspiradores, ferros, chaleiras: usa-os todos os dias sem pensar. Ajudamos a perceber o que vale a pena e o que só parece bom no papel.",
             bullets: [
-              "Pequenos eletrodomésticos de confiança",
+              "Marcas que conhecemos bem",
               "Máquinas de café e cozinha",
-              "Conforto e eficiência no dia a dia",
+              "Para usar todos os dias",
             ],
             ctas: [
               { label: "Pedir aconselhamento", href: "/contactos", variant: "primary" },
@@ -72,7 +72,7 @@ export default async function EletrodomesticosPage() {
 
       <Tagline
         eyebrow="Marcas & garantia"
-        title="Cobertura alargada, diagnóstico honesto."
+        title="E se avariar, reparamos."
         body="Trabalhamos com a maioria das marcas do mercado, desde grandes nomes a equipamentos de uso diário. Nem sempre é possível reparar tudo, mas dizemos sempre o que é possível e o que não é."
       />
 

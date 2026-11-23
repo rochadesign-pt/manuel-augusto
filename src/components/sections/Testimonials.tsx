@@ -18,8 +18,7 @@ export function Testimonials({ items }: { items: Testimonial[] }) {
           />
           <Reveal delay={0.15}>
             <p className="mt-4 text-muted">
-              Mais do que clientes, temos relações que duram há décadas. É essa
-              proximidade que nos motiva a continuar a fazer bem o que fazemos.
+              Há clientes que compram cá há décadas. É o melhor elogio que podemos ter.
             </p>
           </Reveal>
         </div>

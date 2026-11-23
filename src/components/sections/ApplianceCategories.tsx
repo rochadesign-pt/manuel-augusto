@@ -16,7 +16,7 @@ const CATEGORIES: { label: string; icon: IconName }[] = [
 
 export function ApplianceCategories({
   eyebrow = "Reparamos de tudo",
-  title = "Assistência para todos os equipamentos.",
+  title = "O que reparamos.",
 }: {
   eyebrow?: string;
   title?: string;

@@ -118,7 +118,7 @@ export function Header({ settings }: { settings: SiteSettings }) {
                 arrowUp
                 className="hidden border border-white/50 text-white hover:bg-white/10 sm:inline-flex"
               >
-                Fala connosco
+                Fale connosco
               </Button>
             ) : (
               <Button
@@ -127,7 +127,7 @@ export function Header({ settings }: { settings: SiteSettings }) {
                 magnetic
                 className="hidden sm:inline-flex"
               >
-                Fala connosco
+                Fale connosco
               </Button>
             ))}
 
@@ -180,7 +180,7 @@ export function Header({ settings }: { settings: SiteSettings }) {
                 arrowUp
                 className="mt-6 w-full"
               >
-                Fala connosco
+                Fale connosco
               </Button>
               <Button
                 href={`tel:${settings.phone.replace(/\s/g, "")}`}

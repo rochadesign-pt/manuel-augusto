@@ -15,25 +15,23 @@ export function ServicesGrid({ services }: { services: Service[] }) {
       <div className="container-page">
         <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
           <div>
-            <p className="eyebrow">Soluções completas, da venda à assistência</p>
+            <p className="eyebrow">O que fazemos</p>
             <SplitReveal
               as="h2"
-              text="Estamos presentes em cada etapa."
+              text="Da compra à reparação."
               className="mt-3 text-3xl font-semibold md:text-[2.5rem] md:leading-[1.1]"
             />
           </div>
           <div className="lg:pt-3">
             <p className="text-muted">
-              Trabalhamos todos os dias para que nada falhe na sua casa ou
-              negócio. Da escolha do eletrodoméstico certo ao apoio técnico,
-              estamos sempre por perto para resolver com rapidez e segurança.
+              Ajudamos a escolher, entregamos, instalamos e, quando é preciso, reparamos. Tudo feito pela mesma equipa.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Button href="/servicos" variant="primary">
                 Os nossos serviços
               </Button>
               <Button href="/sobre" variant="outline" arrow>
-                Conhecer história
+                A nossa história
               </Button>
             </div>
           </div>

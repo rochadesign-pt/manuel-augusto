@@ -15,7 +15,7 @@ export function NewsletterForm() {
   if (done) {
     return (
       <p className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/80">
-        Obrigado! Fica atento à sua caixa de entrada.
+        Obrigado! Vai receber as novidades no seu e-mail.
       </p>
     );
   }

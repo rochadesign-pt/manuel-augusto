@@ -56,7 +56,7 @@ export const services: Service[] = [
   {
     title: "Assistência técnica",
     description:
-      "Avaria no equipamento? A nossa equipa diagnostica e resolve — com rapidez e sem surpresas na fatura.",
+      "Avariou? Vemos o que tem e dizemos quanto custa antes de reparar.",
     icon: "wrench",
   },
 ];
@@ -127,28 +127,28 @@ export const testimonials: Testimonial[] = [
 
 export const faqs: Faq[] = [
   {
-    question: "Quais marcas de eletrodomésticos trabalham?",
+    question: "Que marcas de eletrodomésticos têm?",
     answer:
-      "Trabalhamos com as principais marcas do mercado, como Bosch, Siemens, LG, Balay, Meireles e outras, garantindo qualidade e durabilidade.",
+      "Bosch, Siemens, Balay, LG e Meireles, entre outras. Se procura uma marca em particular, pergunte-nos.",
   },
   {
     question: "Como funciona a assistência técnica?",
     answer:
-      "Oferecemos suporte técnico especializado, com diagnóstico rápido e solução eficiente para problemas em equipamentos elétricos.",
+      "Ligue-nos ou faça o pedido no site. Vemos o equipamento, dizemos o que tem e quanto custa, e só reparamos se concordar.",
   },
   {
-    question: "Atendem empresas e residências?",
+    question: "Atendem empresas e particulares?",
     answer:
-      "Sim, atendemos tanto clientes residenciais quanto empresariais, com soluções personalizadas para cada necessidade.",
+      "Sim. Atendemos particulares, eletricistas e empresas.",
   },
   {
     question: "Qual a região de atuação?",
     answer:
-      "Os nossos serviços são focados em Ílhavo e região, com atendimento personalizado e de alta qualidade.",
+      "Trabalhamos sobretudo em Ílhavo e nos concelhos vizinhos. Se estiver mais longe, ligue e vemos o que é possível.",
   },
   {
-    question: "Como solicitar um orçamento?",
+    question: "Como peço um orçamento?",
     answer:
-      "Pode solicitar orçamento pelo nosso site, telefone ou e-mail. A nossa equipa está pronta para o atender.",
+      "Por telefone, por e-mail, pelo formulário do site ou na loja.",
   },
 ];

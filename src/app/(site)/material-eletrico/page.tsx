@@ -10,7 +10,7 @@ import { Tagline } from "@/components/sections/Tagline";
 export const metadata: Metadata = {
   title: "Distribuição de Material Elétrico",
   description:
-    "Componentes elétricos certificados para instalações domésticas, comerciais e industriais — com aconselhamento técnico especializado.",
+    "Componentes elétricos certificados para instalações domésticas, comerciais e industriais, com aconselhamento ao balcão.",
   alternates: { canonical: "/material-eletrico" },
 };
 
@@ -19,7 +19,7 @@ export default function MaterialEletricoPage() {
     <>
       <OverlayHero
         title="Distribuição de material elétrico"
-        subtitle="Fornecemos soluções completas de material elétrico para profissionais e empresas, com qualidade e eficiência em cada entrega."
+        subtitle="Cabos, disjuntores, tomadas, quadros e o resto do que uma instalação precisa. Para eletricistas, empresas e particulares."
         tone="navy"
         src="/images/manuel-augusto-hero-material-eletrico.webp"
       />
@@ -27,7 +27,7 @@ export default function MaterialEletricoPage() {
       <StatementBand
         lead="Encontrar o componente certo parece fácil."
         emphasis="Seja numa instalação doméstica ou projeto maior, a diferença entre o certo e o próximo está nos detalhes."
-        body="Temos o material. Temos o conhecimento. E estamos aqui para garantir que leva o que é certo, não apenas o que está disponível."
+        body="Traga a referência, uma fotografia ou a peça antiga. Ajudamos a encontrar o que serve."
       />
 
       <FeatureRows
@@ -37,7 +37,7 @@ export default function MaterialEletricoPage() {
             title: "O componente certo está aqui.",
             src: "/images/manuel-augusto-material-eletrico-1.webp",
             description:
-              "Uma seleção alargada de componentes elétricos certificados para instalações domésticas, comerciais e industriais. Do cabo à tomada, do disjuntor ao quadro, tudo com as especificações certas para cada aplicação.",
+              "Temos em loja material certificado para instalações domésticas, comerciais e industriais, do cabo à tomada e do disjuntor ao quadro.",
             bullets: [
               "Cabos e condutores para todas as aplicações",
               "Disjuntores, interruptores e proteções",
@@ -52,11 +52,11 @@ export default function MaterialEletricoPage() {
             title: "Não saber o que precisa não é problema.",
             src: "/images/manuel-augusto-material-eletrico-2.webp",
             description:
-              "Com décadas de experiência em instalações elétricas, a nossa equipa orienta na escolha certa — seja para uma pequena reparação doméstica ou um projeto de maior escala. Diga-nos o que pretende e nós tratamos do resto.",
+              "Diga-nos o que vai fazer e ajudamos a escolher o material, seja para trocar uma tomada ou para uma obra maior.",
             bullets: [
-              "Orientação técnica sem compromisso",
-              "Seleção adaptada ao seu projeto específico",
-              "Apoio tanto para particulares como profissionais",
+              "Aconselhamento sem compromisso",
+              "Material escolhido para a sua obra",
+              "Para particulares e profissionais",
             ],
             ctas: [
               { label: "Pedir aconselhamento", href: "/contactos", variant: "primary" },
@@ -67,8 +67,8 @@ export default function MaterialEletricoPage() {
 
       <Tagline
         eyebrow="Qualidade"
-        title="Componentes de qualidade. Conhecimento de décadas."
-        body="Conhecimento é material com que se trabalha e sabemos o que isso pode afetar numa instalação. Só quem temos em loja passou pelo critério de quem percebe do assunto há mais de 60 anos."
+        title="Só vendemos o que usaríamos."
+        body="Numa instalação elétrica, um material fraco é um problema à espera de acontecer. Por isso escolhemos com cuidado o que temos na loja."
       />
 
       <ImageBand

@@ -24,7 +24,7 @@ export default function ServicosPage() {
             <SplitReveal
               as="h1"
               trigger="load"
-              text="Da venda à assistência, ajudar é o que nos move."
+              text="Da venda à reparação, tratamos de tudo."
               className="text-4xl font-semibold leading-[1.12] md:text-[3.25rem]"
             />
             <Reveal load delay={0.25}>
@@ -35,7 +35,7 @@ export default function ServicosPage() {
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Button href="/contactos" variant="primary" magnetic>
-                  Fala connosco
+                  Fale connosco
                 </Button>
                 <Button href="/sobre" variant="outline" arrow>
                   Conhecer a empresa
@@ -69,7 +69,7 @@ export default function ServicosPage() {
       <VoucherBand />
 
       <StickyFeatures
-        title="O seu conforto é o nosso objetivo."
+        title="Tudo na mesma loja."
         intro="Seja um novo eletrodoméstico, uma peça elétrica ou até uma reparação, estamos cá para ajudar."
         ctas={[
           { label: "Falar connosco", href: "/contactos", variant: "primary" },
@@ -77,29 +77,29 @@ export default function ServicosPage() {
         ]}
         items={[
           {
-            title: "Equipamentos que fazem a diferença no seu dia a dia",
+            title: "Eletrodomésticos",
             src: "/images/manuel-augusto-servicos-1.webp",
             description:
-              "Oferecemos uma seleção criteriosa de eletrodomésticos das marcas mais fiáveis. O nosso objetivo é proporcionar conforto e praticidade para a sua casa. Se não souber o melhor, estamos cá para ajudar.",
+              "Trabalhamos com marcas em que confiamos e ajudamos a escolher o modelo certo para a sua casa. Entregamos e montamos.",
           },
           {
-            title: "Material elétrico para profissionais e empresas",
+            title: "Material elétrico",
             src: "/images/manuel-augusto-material-eletrico-1.webp",
             description:
               "Material de qualidade para instalações elétricas. A nossa equipa aconselha a solução certa para cada projeto, profissional ou particular.",
           },
           {
-            title: "Manutenção e assistência especializada",
-            src: "/images/manuel-augusto-assistencia-2.webp",
+            title: "Assistência técnica",
+            src: "/images/manuel-augusto-tecnico-frigorifico.webp",
             description:
-              "A nossa equipa garante o funcionamento perfeito. Realizamos uma análise completa do equipamento para identificar a causa do problema.",
+              "Os nossos técnicos reparam eletrodomésticos de várias marcas. Primeiro descobrimos o que está a falhar, depois dizemos quanto custa.",
           },
         ]}
       />
 
       <ProcessSteps
         title="Simples, do primeiro contacto à entrega."
-        intro="Um processo transparente, sem surpresas — sabe sempre o que se segue."
+        intro="Sabe sempre o que vem a seguir e quanto vai pagar."
         steps={[
           {
             title: "Contacto",
@@ -147,15 +147,14 @@ function VoucherBand() {
             Voucher E-Lar
           </span>
           <h2 className="mt-4 font-display text-2xl font-semibold md:text-[1.9rem] md:leading-tight">
-            Somos uma entidade na qual pode trocar o seu voucher E-Lar!
+            Aceitamos o voucher E-Lar.
           </h2>
           <p className="mx-auto mt-3 max-w-md text-sm text-muted">
-            Não hesite em melhorar o conforto do seu lar com a comparticipação do
-            eLar. Fale connosco sem compromisso.
+            Se recebeu o voucher do programa E-Lar, pode usá-lo cá na loja. Explicamos como funciona e ajudamos a escolher o equipamento.
           </p>
           <div className="mt-6 flex justify-center">
             <Button href="/contactos" variant="primary">
-              Entrar em contacto
+              Fale connosco
             </Button>
           </div>
         </div>

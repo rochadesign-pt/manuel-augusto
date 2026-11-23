@@ -24,17 +24,16 @@ export default function SobrePage() {
             <SplitReveal
               as="h1"
               trigger="load"
-              text="Uma história feita de trabalho, confiança e proximidade."
+              text="Uma loja de família, em Ílhavo desde 1960."
               className="text-4xl font-semibold leading-[1.12] md:text-[3.25rem]"
             />
             <Reveal load delay={0.25}>
               <p className="mt-5 max-w-xl text-muted">
-                Desde 1960, ajudamos famílias e empresas a manter o essencial a
-                funcionar, com a mesma dedicação de sempre.
+                Começou com o Manuel Augusto e continuou com os filhos. Vendemos, instalamos e reparamos, como sempre fizemos.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Button href="/contactos" variant="primary" magnetic>
-                  Fala connosco
+                  Fale connosco
                 </Button>
                 <Button href="/servicos" variant="outline" arrow>
                   Os nossos serviços
@@ -45,7 +44,9 @@ export default function SobrePage() {
 
           <Reveal delay={0.1} className="mt-12">
             <Media
-              alt="Interior histórico da loja Manuel Augusto & Filhos"
+              src="/images/manuel-augusto-loja-1961.webp"
+              alt="A fachada da Manuel Augusto & Filhos, Lda. nos primeiros anos"
+              imgClassName="object-[50%_6%]"
               tone="steel"
               className="h-72 w-full md:h-[420px]"
               sizes="100vw"
@@ -68,16 +69,10 @@ export default function SobrePage() {
           </Reveal>
           <Reveal delay={0.1} className="space-y-5 text-muted lg:pt-2">
             <p>
-              Começámos como uma pequena oficina e, ao longo dos anos, crescemos
-              com os nossos clientes, famílias, técnicos, empresas, sempre com a
-              mesma filosofia. Fazer bem, com atenção ao detalhe e respeito por
-              quem confia em nós.
+              Começámos como uma pequena loja com oficina. Com os anos vieram mais clientes: famílias, eletricistas, empresas da zona. A forma de trabalhar manteve-se: fazer bem, explicar com calma e conhecer quem nos procura.
             </p>
             <p>
-              Hoje, continuamos a ser uma empresa familiar. As casas, as
-              histórias. E é isso que nos distingue: a relação próxima e o
-              compromisso em fazer as coisas como deve ser — com tempo, cuidado e
-              seriedade.
+              Hoje continuamos a ser uma empresa familiar. Quem liga fala com alguém da casa, e quem entra na loja é atendido por quem conhece os equipamentos.
             </p>
           </Reveal>
         </div>
@@ -93,18 +88,18 @@ export default function SobrePage() {
 const VALUES: { icon: IconName; title: string; text: string }[] = [
   {
     icon: "advice",
-    title: "A nossa missão",
-    text: "Ajudar cada cliente a escolher e manter o que precisa, com honestidade.",
+    title: "Dizer a verdade",
+    text: "Se não compensa reparar, dizemos. Se um modelo mais barato serve, também.",
   },
   {
     icon: "appliance",
-    title: "A nossa visão",
-    text: "Continuar a ser a referência de confiança em Ílhavo e na região.",
+    title: "Estar perto",
+    text: "Na Avenida 25 de Abril, de segunda a sábado, e sempre ao telefone.",
   },
   {
     icon: "shield",
-    title: "Os nossos valores",
-    text: "Proximidade, rigor e compromisso em cada atendimento.",
+    title: "Fazer bem à primeira",
+    text: "Entregamos, montamos e reparamos com cuidado, para não ter de voltar.",
   },
 ];
 
@@ -115,7 +110,8 @@ function MissionBand() {
         <div className="relative overflow-hidden rounded-3xl">
           <div className="absolute inset-0">
             <Media
-              alt="Fachada da loja Manuel Augusto & Filhos, Lda."
+              src="/images/manuel-augusto-loja-ilhavo.webp"
+              alt="A loja da Manuel Augusto na Avenida 25 de Abril, em Ílhavo"
               tone="navy"
               rounded={false}
               monogram=""
@@ -128,12 +124,10 @@ function MissionBand() {
           <div className="relative flex justify-center px-5 py-16 md:justify-start md:px-12 md:py-20">
             <Reveal className="w-full max-w-md rounded-2xl bg-white p-8 shadow-soft md:p-10">
               <h2 className="font-display text-2xl font-semibold md:text-[1.75rem]">
-                Décadas de dedicação.
-                <br /> Décadas de compromisso.
+                O que não mudou.
               </h2>
               <p className="mt-3 text-sm text-muted">
-                De geração em geração, os valores mantêm-se firmes: dar mais
-                conforto e facilitar a vida dos ilhavenses.
+                Passaram mais de 60 anos e as regras da casa continuam as mesmas.
               </p>
               <ul className="mt-7 space-y-5">
                 {VALUES.map((v) => (

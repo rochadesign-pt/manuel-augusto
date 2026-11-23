@@ -13,7 +13,7 @@ import { TrustBadges } from "@/components/sections/TrustBadges";
 export const metadata: Metadata = {
   title: "Assistência Técnica",
   description:
-    "Serviço especializado de manutenção e reparação de eletrodomésticos e equipamentos elétricos em Ílhavo. Diagnóstico honesto, resolução rápida.",
+    "Serviço especializado de manutenção e reparação de eletrodomésticos e equipamentos elétricos em Ílhavo. Feita pela nossa equipa técnica.",
   alternates: { canonical: "/apoio-tecnico" },
 };
 
@@ -21,8 +21,8 @@ export default function ApoioTecnicoPage() {
   return (
     <>
       <OverlayHero
-        title="Apoio técnico para que nunca pare."
-        subtitle="Oferecemos serviço especializado de manutenção e reparação para eletrodomésticos e equipamentos elétricos em Ílhavo."
+        title="Avariou? Nós reparamos."
+        subtitle="Reparamos e fazemos a manutenção de eletrodomésticos e equipamentos elétricos, com técnicos da casa."
         tone="navy"
         src="/images/manuel-augusto-hero-assistencia.webp"
       />
@@ -30,7 +30,7 @@ export default function ApoioTecnicoPage() {
       <StatementBand
         lead="Uma avaria não avisa."
         emphasis="E quando acontece, a última coisa que quer é ficar à espera sem saber o que está a falhar."
-        body="A nossa equipa diagnostica com rigor, explica em termos técnicos e só avança quando sabe exatamente o que está em cima da mesa."
+        body="Vemos o equipamento, explicamos o que se passa por palavras simples e dizemos quanto custa antes de reparar."
       />
 
       <TrustBadges />
@@ -41,14 +41,14 @@ export default function ApoioTecnicoPage() {
         rows={[
           {
             eyebrow: "Qualidade",
-            title: "Como conseguimos garantir qualidade",
-            src: "/images/manuel-augusto-assistencia-1.webp",
+            title: "Primeiro percebemos o que avariou.",
+            src: "/images/manuel-augusto-reparacao-detalhe.webp",
             description:
-              "Um frigorífico, uma máquina de lavar ou um fogão são equipamentos que usamos todos os dias durante anos. Sabemos quais as marcas que cumprem o que prometem e quais os modelos que resistem ao uso real.",
+              "Antes de trocar um equipamento, vale a pena saber se tem arranjo. Muitas vezes tem, e sai mais barato. Quando não compensa, dizemos-lhe.",
             bullets: [
-              "Diagnóstico antes de qualquer coisa",
-              "Reparar em vez de substituir",
-              "Experiência técnica especializada",
+              "Diagnóstico antes do orçamento",
+              "Reparar antes de substituir",
+              "Técnicos da casa",
             ],
             ctas: [
               { label: "Pedir assistência", href: "/contactos", variant: "primary" },
@@ -59,24 +59,24 @@ export default function ApoioTecnicoPage() {
             title: "Sabemos que uma avaria não tem hora marcada.",
             src: "/images/manuel-augusto-assistencia-3.webp",
             description:
-              "Não precisa de saber se é o termostato, o motor ou a resistência. Diz-nos o que o equipamento está a fazer (ou a deixar de fazer) e a partir daí orientamos o passo seguinte.",
+              "Não precisa de saber se é o termostato, o motor ou a resistência. Diga-nos o que o equipamento está a fazer (ou a deixar de fazer) e a partir daí orientamos o passo seguinte.",
             bullets: [
-              "Atendemos por telefone, email ou presencial",
-              "Sem obrigações antes do diagnóstico",
-              "Processo simples e transparente",
+              "Por telefone, e-mail ou na loja",
+              "Sem compromisso até aceitar o orçamento",
+              "Sabe sempre em que ponto está",
             ],
             ctas: [
               { label: "Pedir assistência", href: "/contactos", variant: "primary" },
             ],
           },
           {
-            eyebrow: "Contacto inicial",
-            title: "Como funciona o nosso serviço de apoio técnico",
+            eyebrow: "Como funciona",
+            title: "Ligue-nos e conte o que se passa.",
             src: "/images/manuel-augusto-assistencia-2.webp",
             description:
-              "O primeiro contacto é a solução final, estamos consigo num processo simples e transparente. Você entra em contacto connosco pelo telefone ou website para relatar o problema técnico e nós tratamos do resto.",
+              "Pode ligar, escrever ou fazer o pedido aqui no site. Dizemos-lhe o passo seguinte e combinamos consigo a visita ou a entrega do equipamento na loja.",
             ctas: [
-              { label: "Falar com técnico", href: "/contactos", variant: "primary" },
+              { label: "Pedir assistência", href: "/contactos", variant: "primary" },
             ],
           },
         ]}
@@ -86,13 +86,13 @@ export default function ApoioTecnicoPage() {
 
       <Tagline
         eyebrow="Experiência"
-        title="Décadas de experiência a resolver o que avaria"
-        body="Com mais de 60 anos de trabalho técnico, sabemos que cada equipamento é diferente e que a solução certa raramente é a mais óbvia. É por isso que começamos sempre por ouvir e perceber antes de agir."
+        title="Há mais de 60 anos a reparar o que avaria."
+        body="Cada avaria é diferente. Por isso começamos sempre por ouvir o que nos conta e por ver o equipamento, antes de dizer seja o que for."
       />
 
       <ImageBand
-        alt="Reparação de um eletrodoméstico pela equipa técnica da Manuel Augusto"
-        src="/images/manuel-augusto-assistencia-4.webp"
+        alt="Técnico da Manuel Augusto a limpar a gaveta do detergente de uma máquina de lavar"
+        src="/images/manuel-augusto-manutencao-detergente.webp"
         tone="navy"
       />
 

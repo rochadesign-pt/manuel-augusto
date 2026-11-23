@@ -16,12 +16,10 @@ export function FaqSection({ items }: { items: Faq[] }) {
         <div className="lg:sticky lg:top-28 lg:self-start">
           <h2 className="text-3xl font-semibold md:text-[2.5rem]">Dúvidas</h2>
           <p className="mt-4 max-w-sm text-muted">
-            Respondemos às perguntas mais frequentes para ajudar a entender os
-            nossos serviços. Caso ainda persista alguma dúvida, não hesite em
-            falar com a nossa equipa!
+            As perguntas que mais nos fazem. Se a sua não estiver aqui, ligue-nos.
           </p>
           <Button href="/contactos" variant="primary" className="mt-6">
-            Entrar em contacto
+            Fale connosco
           </Button>
         </div>
 

@@ -14,23 +14,20 @@ export function StatsShowcase({ stats }: { stats: Stat[] }) {
       <div className="container-page">
         <div className="grid gap-8 lg:grid-cols-2 lg:items-end">
           <div>
-            <p className="eyebrow">Nossos números</p>
+            <p className="eyebrow">Em números</p>
             <SplitReveal
               as="h2"
-              text="Décadas de experiência ao serviço de quem confia em nós."
+              text="Mais de 60 anos a trabalhar em Ílhavo."
               className="mt-3 text-3xl md:text-[2.5rem] md:leading-[1.1]"
             />
           </div>
           <Reveal delay={0.1} className="lg:pb-2">
             <p className="text-muted">
-              Desde 1960 que fazemos o que sabemos melhor: ajudar pessoas e
-              empresas a manter tudo a funcionar — com segurança, qualidade e
-              atenção ao detalhe. O tempo ensinou-nos que a verdadeira excelência
-              está na confiança construída dia após dia.
+              Começámos em 1960 e ainda hoje fazemos o mesmo: vender bons equipamentos, explicar com calma e reparar o que avaria. Muitos clientes conhecem-nos pelo nome, e nós a eles.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Button href="/sobre" variant="primary">
-                Conhecer história
+                A nossa história
               </Button>
               <Button href="/servicos" variant="outline" arrow>
                 Os nossos serviços
@@ -102,8 +99,7 @@ function AssistanceCard({ className }: { className?: string }) {
           Equipa própria de assistência técnica, aqui em Ílhavo.
         </p>
         <p className="mt-2 text-sm leading-relaxed text-white/75">
-          Diagnóstico honesto, reparação com peças de origem e garantia — sem
-          intermediários.
+          Os técnicos são da casa. Vemos o que se passa, dizemos quanto custa e só depois reparamos.
         </p>
       </div>
     </Reveal>

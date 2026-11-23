@@ -41,12 +41,11 @@ export default async function ContactosPage() {
               <SplitReveal
                 as="h1"
                 trigger="load"
-                text="Estamos disponíveis para ajudar!"
+                text="Ligue, escreva ou passe por cá."
                 className="mt-4 max-w-md text-4xl font-semibold text-white md:text-[3.25rem]"
               />
               <p className="mt-5 max-w-sm text-white/75">
-                Dúvidas, informações, estamos cá para encontrar a solução ideal.
-                A nossa equipa está sempre pronta para o assistir e acompanhar.
+                Uma dúvida sobre um equipamento, um orçamento ou uma avaria: diga-nos o que precisa e respondemos o mais depressa possível.
               </p>
             </div>
           </div>

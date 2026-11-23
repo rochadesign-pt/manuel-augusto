@@ -40,7 +40,7 @@ export function Footer({ settings }: { settings: SiteSettings }) {
           <FooterCol title="Contactos">
             <p className="text-white/80">{settings.addressStreet}</p>
             <p>
-              {settings.addressPostal} — {settings.addressCity}
+              {settings.addressPostal} {settings.addressCity}
             </p>
             <a
               href={`tel:${settings.phone.replace(/\s/g, "")}`}
@@ -77,7 +77,7 @@ export function Footer({ settings }: { settings: SiteSettings }) {
 
           <FooterCol title="Novidades">
             <p className="mb-4 text-white/60">
-              Dicas e novidades sobre eletrodomésticos e assistência — sem spam.
+              Conselhos e novidades da loja, de vez em quando.
             </p>
             <NewsletterForm />
           </FooterCol>

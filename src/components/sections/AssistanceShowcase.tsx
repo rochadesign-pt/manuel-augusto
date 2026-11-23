@@ -8,12 +8,12 @@ const FEATURES: { icon: IconName; title: string; text: string }[] = [
   {
     icon: "advice",
     title: "Diagnóstico honesto",
-    text: "Avaliamos antes de avançar e explicamos o que está a falhar — sem surpresas.",
+    text: "Primeiro vemos o que está a falhar. Só avançamos depois de lhe dizer o preço.",
   },
   {
     icon: "shield",
     title: "Garantia de 3 anos",
-    text: "Cobertura no equipamento reparado, com peças e mão de obra incluídas.",
+    text: "Nos eletrodomésticos comprados connosco, para clientes particulares.",
   },
 ];
 
@@ -31,8 +31,7 @@ export function AssistanceShowcase() {
             />
             <Reveal delay={0.1}>
               <p className="mt-5 max-w-md text-muted">
-                Sabe sempre em que ponto está o seu equipamento — do primeiro
-                contacto à entrega, tratamos de tudo com rigor.
+                Ligamos-lhe a dizer o que encontrámos, quanto custa e quando fica pronto.
               </p>
             </Reveal>
           </div>
@@ -65,8 +64,8 @@ export function AssistanceShowcase() {
 function ShowcasePanel() {
   return (
     <Media
-      src="/images/manuel-augusto-hero-assistencia.webp"
-      alt="Técnico da Manuel Augusto a reparar uma máquina de lavar roupa"
+      src="/images/manuel-augusto-tecnico-maquina-lavar.webp"
+      alt="Técnico da Manuel Augusto a verificar uma máquina de lavar roupa"
       tone="steel"
       monogram=""
       className="aspect-[4/3] w-full rounded-3xl md:aspect-[21/9]"
