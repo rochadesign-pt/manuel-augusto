@@ -22,11 +22,21 @@ export function ServicesGrid({ services }: { services: Service[] }) {
               className="mt-3 text-3xl font-semibold md:text-[2.5rem] md:leading-[1.1]"
             />
           </div>
-          <p className="text-muted lg:pt-3">
-            Trabalhamos todos os dias para que nada falhe na sua casa ou negócio.
-            Da escolha do eletrodoméstico certo ao apoio técnico, estamos sempre
-            por perto para resolver com rapidez e segurança.
-          </p>
+          <div className="lg:pt-3">
+            <p className="text-muted">
+              Trabalhamos todos os dias para que nada falhe na sua casa ou
+              negócio. Da escolha do eletrodoméstico certo ao apoio técnico,
+              estamos sempre por perto para resolver com rapidez e segurança.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Button href="/servicos" variant="primary">
+                Os nossos serviços
+              </Button>
+              <Button href="/sobre" variant="outline" arrow>
+                Conhecer história
+              </Button>
+            </div>
+          </div>
         </div>
 
         <motion.ul
@@ -34,7 +44,7 @@ export function ServicesGrid({ services }: { services: Service[] }) {
           initial={reduce ? false : "hidden"}
           whileInView={reduce ? undefined : "show"}
           viewport={{ once: true, margin: "-10%" }}
-          className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4 md:mt-24"
+          className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4 md:mt-20"
         >
           {services.map((service) => (
             <motion.li
@@ -54,15 +64,6 @@ export function ServicesGrid({ services }: { services: Service[] }) {
             </motion.li>
           ))}
         </motion.ul>
-
-        <div className="mt-12 flex flex-wrap gap-3">
-          <Button href="/servicos" variant="primary">
-            Os nossos serviços
-          </Button>
-          <Button href="/sobre" variant="outline" arrow>
-            Conhecer história
-          </Button>
-        </div>
       </div>
     </section>
   );
